@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="SIMAR MANN SINGH">
+
+  <title>SIMAR MANN SINGH</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" >
+    <div class="overlay tint" style="background-image: url('img/post_2_background3-1.jpg'); filter:blur(2px); -webkit-filter: blur(2px);" ></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>What is “Linear Advance” and its effect on your 3D printing process</h1>
+            <h2 class="subheading">  </h2>
+            <span class="meta">Posted by
+              <a href="#">Simar</a>
+              on December 26, 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">      
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto" style="text-align:justify;">
+
+          <p>What exactly Linear advance means and how does it affects your 3D print’s quality and finish? Is there any way you can improve your print’s quality using this method? These are the questions which will be answered in this blog post. Lets get started</p>
+          <p>Before answering what exactly Linear advance is, let us take a look on what exactly happens inside the extruder and hot-end while it is printing. It is really important to know the background story first. It might not take that long. So just keep calm and keep reading</p>
+          
+          <h3>Over/Under Extrusion</h3>
+          
+          <p>In 3D printers with Bowden extruder, the fixed extruder feeds the filament to the moving hot-end by pushing the filament through a tube, which protects the filament from breaking. Extruder is relatively heavy when compared against the hot-end which in itself comprise of heater and the nozzle where the filament is actually melted and comes out from. A simple depiction is shown below in figure 1. Separating the extruder and hot-end makes the hot-end light which results in precise movements of hot-end while printing</p>
+
+          <figure>
+            <img src="./img/2019/12/extruder.svg" class="blog-img" width="80%" alt="Hot-end of 3D printer">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 1: Hot-end of a 3D printer</figcaption>          
+          </figure>          
+
+          <p>Now as the filament moves across the tube enclosing the filament, it often tends to build pressure. In other words, when the extruder which is connected to a motor, pushes the filament in the tube, towards the hot-end, filament forms wave like structure. And the reason for this is simple. The size of nozzle opening is usually of the range 0.4 mm while a filament is 1.75 mm thick in girth. When the PLA melts, it oozes out of nozzle at a fixes pace. If the extruder pushes the filament more towards the hot-end, the filament would end up building some pressure in the tube and hence it will form some kind of wave inside the tube as shown in figure 2 below. Now, even if the extruder has stopped pushing the filament towards the hot-end, the pressure already built up inside the tube needs to be release and there is only one opening from where it can be released, the Nozzle. Therefore, the nozzle end up oozing out a little extra material, which it should NOT.</p>
+          
+          <figure>
+            <img src="./img/2019/12/linearadvance3.svg" class="blog-img" width="80%" alt="Filament with pressure built-up resulting in wave like structure">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 2: Filament with pressure built-up resulting in wave like structure</figcaption>          
+          </figure>
+          
+          <p>Due to this phenomenon, the layers we get are not uniform. If we take a closer look on each layer, it will have regions with under-extrusion which happen as the hot-end quickly starts moving at the beginning of layer, then comes good-extrusion which is region with even layer thickness and finally the layer end has region with over-extrusion which appears like a BLOB which forms as the nozzle keeps oozing out PLA even after the hot-end has stopped moving at the end of layer printing, as shown in figure 3.</p>
+          
+          <figure>
+            <img src="./img/2019/12/linearadvance.svg" class="blog-img" width="80%" alt="Regions of each layer while printing">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 3: Regions of each layer while printing</figcaption>          
+          </figure>
+          
+          <p>This will cause 3D prints to have unwanted tiny blobs at the ends of each horizontal layer as shown in figure 4. The blobs are exaggerated slightly to make the blob effect conspicuous. However, this problem of extra material oozing out of nozzle, can be mitigated by enabling the Linear Advance.</p>
+          
+          <figure>
+            <img src="./img/2019/12/linearadvance2.svg" class="blog-img" width="80%" alt="Blob formation at the end of each horizontal layer">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 4: Blob formation at the end of each horizontal layer</figcaption>          
+          </figure>
+          
+          <h3>Linear Advance</h3>
+          <h6>What is Linear Advance ?</h6>
+
+          <p>Linear advance is basically an algorithm which predicts the existing pressure in the tube. It is now-a-days included in almost all of the modern firmware of every 3D printers. All you need to do is enable it as it is disabled by default.</p>
+          <p>It basically separates the extruder from the other stepper motors in terms of movements. For example, when some stepper motor is calibrated, it’ll move the distance, say 0 to 100 mm in exact same manner (covering exact same distance with same speed) every time. But with extruder, it is different. In case of extruder, it can be compared to the process of icing on a cake. The reason being, as mentioned above, we’ve a 1.75 mm thick filament which melts and is squeezed out from a 0.4 mm thick Nozzle. So, the pressure needs to be applied evenly, such that the liquid PLA oozing out of Nozzle doesn’t spread out too much.</p>
+
+          <h6>How does it function ?</h6>
+
+          <p>Linear Advance calculates the pressure build up in the extruder and causes the hot-end to stop printing slightly early before reaching the end of layer. So, the extra material still oozes out while extruder is still moving and printing the last region of each horizontal layer which creates smooth layers. This way, it mitigates the formation of blobs</p>
+          <p>It also adds a slight delay to the movement of hot-end at the beginning of each layer. So that, the hot-end’s movement aligns with the oozing of material which reduces <i>under-extrusion</i> at the beginning of each horizontal layer.</p>
+
+          <h6>Advantages</h6>
+          <ul>
+            <li>With Linear Advance enabled, you get sharp corner</li>
+            <li>It speeds up the printing process slightly</li>
+            <li>It decreases the blob formation.</li>
+            <li>Setting it up is very easy, in case of MARLIN firmware which is used or can be flashed in most of the Chinese 3D printer companies like Creality, AnyCubic and FlashForge etc.</li>            
+          </ul>
+
+          <h6>Disadvantages</h6>
+          <ul>
+            <li>It may take some time to download the firmware, setting it up especially when you are a beginner.</li>
+          </ul>
+
+          <h3>Enabling Linear Advance</h3>
+          <p>Before enabling Linear Advance, there are some pre-requisites that needs to be fulfilled.</p>
+
+          <h6>Pre-requisites</h6>
+          <ul>
+            <li>Setup bootloader and access to firmware</li>
+            <li>Make sure to calculate E-Step from calibration.</li>
+            <li>Make sure you have a consistent first layer.</li>
+          </ul>
+
+          <p>Now, after making sure all the pre-requisites are met, Linear Advance can be enabled in Marlin using the following procedure</p>
+          <ol>
+            <li>Download Marlin by clicking on the Button shown below (just scroll down to find two buttons) and downloading the latest build available for your platform. Its a small ~14 MB zip file.</li></br>
+            <li>After downloading the Marlin, extract it to a location you can easily find (e.g,on Desktop or perhaps in Downloads folder, whichever you like)</li></br>
+            <li><b>COPY </b>: Go to folder config -> examples -> Creality (or the company of your 3D printer, in case it is different from Creality) -> Ender-3 (or the model of your 3D printer) and then copy all the files.</li></br>
+            <li><b>PASTE</b>: Go to folder Marlin and paste all the copied files here. It will replace two files ( <i>configuration.h</i> and <i>configuration_adv.h</i> )</li></br>
+            <li>Now simply open the file Marlin.ino with Arduino IDE which will open all the necessary files automatically in Arduino IDE in different tabs (if you don’t have it installed, press the button below to go to Arduino website, download the software and install it). Go to tab “Configuration_adv.h”.</li></br>
+            <li>Press CTRL + F (on Windows) or / (on linux or if opening the file in vim) and search “LIN_ADVANCE”.</li></br>
+            <li>Uncomment the line saying #define LIN_ADVANCE (basically delete the two forward slashes ‘//’ in the beginning of the line). In build 2.0.x, it is on line 1415. You can simply press CTRL + G and type 1415 to directly go to that line, but in future builds line number might change as well.</li></br>
+            <li>Save the code. We will use this updated code to flash the Marlin firmware to 3D printer.</li></br>
+            <li>Connect you 3D printer to the computer using USB cable. Your computer will assign a COM port to your 3D printer.</li></br>
+            <li>At this point, chances are that your printer’s motherboard is not installed by default on your computer. So to do that, click on the button <i>Printer boards</i> below to open the website. You need to find which board your 3D printer uses. In case of Creality Ender-3, it uses <b>Sanguino</b> , the repository of which is maintained by <b>Kristian Sloth Lauszus</b>. Simply copy the path (or URL which is mentioned on the website, ending with .json)</li></br>
+            <li>Next, go back to Arduino IDE -> File -> Preferences and paste the URL under Additional Boards Manager URLs as shown in <i>figure 5</i> below. This only tells Arduino IDE the address from where to download, but it has not downloaded the profile yet. To do so, go Arduino IDE -> Tools -> Boards (currently selected board) -> Board Manager as shown in <i>figure 6</i> below. Once it opens, search for board called “Sanguino” and install it by clicking on the Install button on the lower right corner.</li></br>
+            <li>After installing the board, you also need to select it(pretty obvious, isn’t it, why would you install it otherwise ! Duh,.. :p). Simply go to Tools -> Boards -> Sanguino and select it.</li></br>
+            <li>We are almost there, don’t worry. After this, you also need to select the right processor used by your 3D printer. In case of Creality Ender-3, it uses ATmega 1284P. Select the board by going to Tools -> Processors -> Atmega 1284P (16 Mhz). Done too much selection. Phew, i know….!!</li></br>
+            <li>We need one last thing – U8glib.h library. To to do, click on button below for “U8glib” to open the link in a new tab, scroll down and go to “<a href="https://bintray.com/olikraus/u8glib/Arduino/">U8glib for Arduino</a>” (or simply select this hyperlink), download the version which is not too recent (at the time of writing this blog, v1.17 seems a good choice as v1.18 is the latest one) as a zip file.</li></br>
+            <li>Go to Sketch -> Include Library -> Add .Zip Library and select the downloaded file as shown in <i>figure 7</i>.</li></br>
+            <li>Now, all configurations are done. Click the Compile button (shaped like a tick) in Arduino IDE to compile. It might take some time depending on the speed of your computer and available RAM but it should compile successfully without errors.</li>
+          </ol>
+          
+          <figure>
+            <img src="./img/2019/12/boardprofile.png" class="blog-img" width="70%" alt="Adding Board profile to Arduino IDE">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 5: Adding Board profile to Arduino IDE</figcaption>          
+          </figure>
+
+          <figure>
+            <img src="./img/2019/12/boardselect.png" class="blog-img" width="70%" alt="Installing the board after adding the board profile">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 6: Installing the board after adding the board profile</figcaption>          
+          </figure>
+
+          <figure>
+            <img src="./img/2019/12/u8glibselect.png" class="blog-img" width="70%" alt="Adding U8glib library to Arduino IDE">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 7: Adding U8glib library to Arduino IDE</figcaption>          
+          </figure>
+
+          <p>In case you still face issues, check out the video tutorial below by Thomas Sanladerer on how to upgrade Marlin Firmware.</p>
+
+          <span>
+            <a style="width:220px; margin-right: 15px;" href="https://marlinfw.org/meta/download/" class="btn" type="submit">Download Marlin</a>
+          </span>
+          
+          <span>
+            <a style="width:220px;" href="https://www.arduino.cc/en/main/software" class="btn" type="submit">Download Arduino</a>
+          </span>
+          </br>
+          </br>
+          <span>
+            <a style="width:220px; margin-right: 15px;" href="https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls" class="btn" type="submit">Printer Boards</a>
+          </span>          
+          <span>
+            <a style="width:220px;" href="https://bintray.com/olikraus/u8glib/Arduino/" class="btn" type="submit">U8Glib Library</a>
+          </span>
+          </br>
+          </br>
+
+          <figure>
+            <iframe width="740" height="416" src="https://www.youtube.com/embed/lAKyZd63_ns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <figcaption style="font-size: 15px; text-align: center;">Video : Flashing your 3D printer with Marlin firmware. You can also update your firmware in case you already have Marlin installed</figcaption>          
+          </figure>
+
+          
+        </div>
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function(){
+          this.page.url = 'http://127.0.0.1:5500/post_2.html';
+          this.page.identifier = PAGE_IDENTIFIER;          
+        };
+        (function() {
+          var d = document;
+          var s = d.createElement('script');
+          s.src = 'https://simarmannsingh-de.disqus.com/embed.js'
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable Javascript to run a third party plugin Disqus which will enable you to view and post comments related to this blog post. Developer and maintainer of this blog is trying to implement an independent and open source comment box but has not finished yet, meanwhile using Disqus plugin. </noscript>
+    </div>
+    <div id="subscribe-btn-email" class="subscribe-btn">
+      <span>Subscribe</span>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>   
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://facebook.com/simarms" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">Copyright &copy; simarmannsingh.de  |   2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="bg-modal">
+    <div class="bg-content">
+      <form action="https://ml.kundenserver.de/cgi-bin/mailinglist.cgi" method="POST" >
+        <div id="subsribe-close-button" class="close">+</div>
+        <img src="./img/emailIcon.png" width="80px" alt="">
+        <br/>
+        <input checked name="subscribe_r" type="hidden" value="subscribe">      
+        <span>Get email notifications for new posts</span>
+        <br/>
+        <input maxlength="35" name="mailaccount_r" size="30" placeholder="Please enter your Email address" type="text">
+        <br/>      
+        <input maxlength="35" name="mailaccount2_r" size="30" placeholder="Enter your Email Address again" type="text">
+        <br/>
+        <input type="SUBMIT" class="btn" value="Subscribe">          
+        <input name="FBMLNAME" type="hidden" value="press@simarmannsingh.de">
+        <input name="FBLANG" type="hidden" value="de">
+        <input name="FBURLERROR_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/error.de.html">
+        <input name="FBURLSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/subscribe.de.html">
+        <input name="FBURLUNSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/unsubscribe.de.html">
+        <input name="FBURLINVALID_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/invalid.de.html">
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
