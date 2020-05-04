@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="SIMAR MANN SINGH">
+
+  <title>SIMAR MANN SINGH</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/personalblog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/Backgrounds/topstlalgo.svg');" >
+    <div class="overlay tint" ></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Top 10 STL algorithms that can save your day</h1>
+            <h2 class="subheading">  </h2>
+            <span class="meta">Posted by
+              <a href="#">Simar</a>
+              on October 23, 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">      
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto" style="text-align:justify;">
+
+          <h3>Algortihm</h3>
+          <p>An Algorithm is essentially a finite set of instructions, which when executed produces a desired result. The calculation it perform could require some input data, or it could also require access to some resources depending on the application it serves. Algorithms are not new, as many people would perceive them to be. They date back to atleast ancient Babylonion era (around 2500 BC.) if not prior. As per wikipedia,</p>
+          <p><i>"<a href="https://en.wikipedia.org/wiki/Arithmetic" target="_blank">Arithmetic</a> algorithms, such as a <a href="https://en.wikipedia.org/wiki/Division_algorithm" target="_blank">division algorithm</a>, was used by ancient <a href="https://en.wikipedia.org/wiki/Babylonian_mathematics" target="_blank">Babylonian mathematicians</a> c. 2500 BC and <a href="https://en.wikipedia.org/wiki/Egyptian_mathematics" target="_blank">Egyptian mathematicians</a> c. 1550 BC. <a href="https://en.wikipedia.org/wiki/Greek_mathematics" target="_blank">Greek mathematicians</a> later used algorithms in the <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes" target="_blank">sieve of Eratosthenes</a> for finding prime numbers"</i></p>
+          <p>As of today, there are a ton of algorithms out there. Speaking specifically of programming language C++, if you have gone through the STL library, there are at least 105 major algorithms in STL itself. The thing with Algorithms is that you need to practice a lot to feel confidant. However, for the beginners, the most difficult conundrum is to determine where to start and which algorithms to master first. The plethora of algorithms out there for every niche tends to baffle the beginners. But there’s a good news for those already intimidated beginners. You surely need to learn a lot of algorithms, but you don’t need to know all of them to start working. We can classify all the algorithms into some bunch of sections. What you can do instead, is learn a few algorithms from each section and thus you’ll not be marooned on the island when someone asks you about algorithms.</p>
+          <p>Below is a list of ten algorithm classes in which all the algorithms from the STL library can be classified into and under each class, there are a handful of algorithms that you can befriend with for the time being. Also mentioned are the situations under which you will find those algorithms useful.</p>
+          <p>So, to start with, lets go through the list of ten algorithms classes (and one bonus class) that we will discuss here and then we will elaborate each one.</p>
+          <ol>
+            <li>Heap</li>
+            <li>Sort</li>
+            <li>Partition</li>
+            <li>Permutations</li>
+            <li>Query a Value</li>
+            <li>Query a Property</li>
+            <li>Search a Value or a Range</li>
+            <li>Sets</li>
+            <li>Movers</li>
+            <li>Modifiers</li>            
+          </ol>
+
+          <h3>Heap</h3>
+          <p>Heap, in real life which can be represented as a tree where every node is smaller than its child or the node below it. Figure 1(a) shows how a heap might look like in real life. However, a heap in C++ is slightly different. Unlike in real life, heap in C++ can be represented like a tree where parent node  is always larger than its children, as shown in figure 1(b).</p>
+          <p>To represent Heap in Memory, we can use an Array. To initialize an array, we simply add elements row-wise. Heap initialization is shown in figure 2. As seen in the figure, for a heap which appears like a tree, elements are stored in array in a row-wise manner.</p>
+          <p>At the moment, this array is merely a collection of integers (in given example). To make it a heap, we can call the STL algo <b>make_heap</b>.</p>
+
+          <div class="code">
+            std::make_heap(begin(number), end(number));
+          </div>
+
+          <p>To add a new element to the heap and bubble its way to its appropriate position, we use <b>push_back(element)</b> and then <b>push_heap</b> as shown below.</p>
+
+          <div class="code">
+            number.push_back(8.81);</br>
+            std::push_heap(begin(number), end(number));
+          </div>
+
+          <p>To pop something from a heap, we can only remove elements from one end which can only be largest element. To do so, we swap its position with the last element of the heap (which is probably the smallest element of the heap) & then pop it out. We use <b>pop_heap</b> and then <b>pop_back</b> as shown below.</p>
+
+          <div class="code">
+            std::pop_heap(begin(number), end(number)); </br>
+            number.pop_back()
+          </div>
+
+          <p><b>NOTE</b></br><i>If pop_back is not called, then calling pop_heap() will cause all the largest elements fall in order at the end of the heap. This will cause heap to be sorted and this is the actual mechansm of <b>sort_heap</b></i></p>
+
+          <h3>Sort</h3>
+          <p>Sorting a collection is basically rearranging the elements of a collection in a certain order depending on the criteria. There are lots of sorting algorithms. In STL, simplest sorting algorithm is <b>Sort</b>. This sorts the collection in ascending order.</p>
+
+          <div class="code">
+            std::sort()
+          </div>
+
+          <p>When we need to sort only a subset of a collection, we can use <b>partial_sort</b>. This algorithm takes in, the beginning of the collection and the point up to where collection needs to be sorted.</p>
+
+          <div class="code">
+            std::partial_sort()
+          </div>
+
+          <p>When we need to know an element that would have been there, had the collection been sorted, we can do so by using <b>nth_element</b> algorithm.</p>
+
+          <div class="code">
+            std::nth_element()
+          </div>
+
+          <p>When there are two sorted sub-collections that are adjacent to each other, however the entire collection as a whole is not sorted, we can use <b>inplace_merge</b>.</p>
+
+          <div class="code">
+            std::inplace_merge()
+          </div>
+        </br>
+          <h3>Partitioning</h3>
+          <p>It is basically organizing a collection based on a predicate. One example could be a situation where a collection has mixed values of zeroes and ones but we need to partition the collection into two parts based on whether the element is a zero or a one as shown below.</p>
+          <p>we can use partition to put all the zeroes in the beginning and all the ones at the end. The point which creates the divide between the two regions is called “Partition Point”.</p>
+
+          <div class="code">
+            std::partition()
+          </div>
+          
+          <p>The algorithm which retrieves the partitioning point is called partition_point.</p>
+
+          <div class="code">
+            std::partition_point()
+          </div>
+          </br>
+          <h3>Permutations</h3>
+          <p>These are the algorithms which change the order of the elements of a collection without changing their values.</p>
+          <ol>
+            <li>
+              <p>Rotate </br>It is one algorithm where elements in the middle and end goes to the beginning and that is decided by where the middle points to as shown in the figure below.</p>
+              <div class="code">
+                std::rotate()
+              </div>
+            </li>
+            <li>
+              <p>Shuffle</br>It uses a random generator and reorganizes the collection randomly.</p>
+              <div class="code">
+                std::shuffle()
+              </div>              
+            </li>
+            <li>
+              <p>Next_permutation</br>Elements can be compared to each other depending on their order which is similar to order of alphabets that appears in a Dictionary. By calling this algorithm, it will rearrange the elements of the collection in such a way that the new collection order is just the next order of permutation in respect of order of elements.</p>
+              <p>The figure shown below clarifies what the order means in this context.</p>
+              <div class="code">
+                std::next_permutation()
+              </div>
+            </li>
+            <li>
+              <p>Prev_permutation</br>Just like Next_permutation, prev_permutation gives the previous order.</p>
+              <div class="code">
+                std::prev_permutation()
+              </div>
+            </li>
+            <li>
+              <p>Finally, reverse simply reverses the order of collection entirely.</p>
+              <div class="code">
+                std::reverse()
+              </div>
+            </li>
+          </ol>
+          <h3>Query a Value</h3>
+          <p>Querying forms a fundamental class in algorithms as many times, we only need to know what value or property certain variable or objects have. This class has numeric algorithms which return a specific value (or No value as No values is also technically a value)</p>
+          <ol>
+            <li>
+              <p>Count </br>This algorithm counts the occurrence of an input value in a collection of elements and returns the occurrence as integer value. As shown in the figure, count(a) returns 3 as there are three times ‘a’ has occurred in the collection.</p>
+              <div class="code">
+                std::count()
+              </div>
+            </li>
+            <li>
+              <p>Accumulate / (Transform_) reduce</br>Accumulate find the sum of all the elements of a collection and returns it. Reduce works just like accumulate except for the fact that it doesn’t take initial value (which certainly saves some overhead) and this algorithm can be parallelized which means, it can be programmed to utilize multiple cores of a microprocessor simultaneously (Obviously, if the microprocessor has multiple cores in the first place. No points for guessing that. :p).</p>
+              <p>Following figure shows how accumulate works.</p>
+              <div class="code">
+                std::accumulate()
+              </div>
+            </li>
+            <li>
+              <p>Transform_reduce</br>Transform_reduce works same as reduce but it works on functions and templates. Its like the cousin twin brother who also happen to go and live abroad with his rich parent (poor reduce couldn’t afford all that ).</p>
+              <div class="code">
+                std::transform_reduce()
+              </div>
+            </li>
+            <li>
+              <p>Partial_sum</br>Partial_sum is used to calculate sum of adjacent elements upto a given position in a collection of elements.</p>
+              <p>For instance, the element at position three will constitute of the sum of first two elements elements and the third element (which basically means sum of first three elements) as shown below.</p>
+              <div class="code">
+                std::partial_sum()
+              </div>
+            </li>
+            <li>
+              <p>Inclusive_scan / Transform_Inclusive_scan</br>Inclusive_scan performs the same functionality as partial_sum but can be parallelized. Exlusive_scan, on the other hand, doesn’t include the current element while calculating the sum upto that position. It only calculates up until that position as shown below.</p>
+              <div class="cod">
+                std::inclusive_scan()
+              </div>
+              <p>Transform_inclusive_scan and Transform_exclusive_scan are applied on the functions and objects.</p>
+              <div class="code">
+                std::transform_inclusive_scan()
+              </div>
+            </li>
+            <li>
+              <p>Inner_product</br>Inner_product calculates product of corresponding elements of two collection before adding the sum. This could be hard to comprehend. To understand this, have a look on the figure below. First the corresponding elements of both the collections are multiplied to create a single collection having elements as the result of multiplication and then the sum of all the elements of that collection is taken which is given by inner_product algorithm.</p>
+              <div class="code">
+                std::inner_product()
+              </div>
+            </li>
+            <li>
+              <p>Adjacent_difference</br>This algorithm calculates the difference of adjacent elements of a collection.</p>
+              <div class="code">
+                std::adjacent_difference()
+              </div>
+            </li>
+            <li>
+              <p>Sample</br>This algorithm randomly pick out specified number of elements from a collection using a random generator.</p>
+              <div class="code">
+                std::sample()
+              </div>
+            </li>
+          </ol>         
+        
+          <h3>Query a Property</h3>
+          <p>This class of algorithm proves extremely useful for day to day basis. One can query a property on one collection as well as on two ranges.</p>
+          <p>Following is a list of algorithms used to query a property on one collection.</p>
+          <ol>
+            <li>
+              <p>All_of</br>Takes a predicate and a collection and returns TRUE (boolean value) if all the elements satisfy the property (predicate)</p>
+            </li>
+            <li>
+              <p>Any_of</br>Returns TRUE if any of the element of the collection satisfy the condition (property/predicate)</p>
+            </li>
+            <li>
+              <p>None_of</br>Returns TRUE if none of the element of the collection satisfy the property.</p>
+            </li>
+          </ol>          
+          <p>Following is a list of algorithms used to query property on two ranges where the idea is to compare two ranges.</p>
+          <ol>
+            <li>
+              <p>Equal</br>If, given two ranges, all the elements are same in same order in both the ranges (or collection) and both the collections have same size, the algorithm returns a boolean true</p>
+            </li>
+            <li>
+              <p>Is_permutation</br>If two collections have same size and same elements but Not in same order, then this algorithm returns a boolean true.</p>
+            </li>
+            <li>
+              <p>Lexicographical_compare</br>Given two collection, this algorithm returns true if the first collection is smaller in order than the second collection.</p>
+            </li>
+            <li>
+              <p>Mismatch</br>This algorithm matches two collections and stops at the point where two collections differ which is a way gives back the first point of mismatch.</p>
+            </li>
+          </ol>
+
+          <h3>Search Value or Range</h3>
+          <p>When searching for a value, algorithms are broadly classified into two groups – Sorted and Unsorted.</p>
+
+          <h6>Unsorted</h6>
+          <p>This group consist of two algorithms namely find and adjacent_find which are both briefed below.</p>
+          <p>Find</br>When we need to find something in a collection, we can call this algorithm and it returns the position of the searched item in the collection if the searched item is present in the collection. Else, it returns Null.</p>
+          <div class="code">
+            std::find()
+          </div>
+
+          <p>Adjacent_find</br>When we need to find two consecutive occurrence of a value, we can use this algorithm. For instance, if we have to find where in a collection of numbers, two consecutive ‘3’ appears, we can use this algorithm. This algorithm returns the position of first element and the next element is adjacent to the returned position ( quite obviously)</p>
+          <div class="code">
+            std::adjacent_find()
+          </div>
+          </br>
+
+          <h6>Sorted</h6>
+          <p>In a sorted collection, all the occurrences of a same value are going to lie together, adjacent to each other. Hence, they form like a subrange.</p>
+          <p>Equal_range</br>This algorithm returns the position of of the sub-range that we intend to find in a sorted collection.</p>
+          <p>Lower_bound / upper_bound</br>If we have to add another element of a value which already exist in a sorted collection, we can either add the element on the left of the existing element ( or group of elements) or on the right of element. To add an element to the left of an existing element, we can use this algorithm which returns the position where to insert the new element. Upper_bound returns the position which lies on right of the existing element. This can be better explained using figure shown below.</p>
+          <div class="code">
+            std::lower_bound()</br>
+            std::upper_bound()
+          </div>
+
+          <p>Binary_search</br>This algorithm returns a boolean True if it finds the item we are looking for in the collection. It performs Binary Search to find the item but it doesn’t return the position of the item, if the item is found. It only returns a confirmation in the form of boolean True or False.</p>
+          <p>The Search can be performed for a range of values (also called as sub-range) as well.</p>
+          <p>Search</br>This algorithm returns the first occurrence of a sub-range in a collection. It basically gives the position where the sub-range starts.</p>
+          <div class="code">
+            std::search()
+          </div>
+
+          <p>Find_end</br>This algorithm returns the Last occurrence of the sub-range in a collection. In a way, this is opposite of search algorithm.</p>
+          <div class="code">
+            std::find_end()
+          </div>
+
+          <p>Find_first_of</br>If you want to search the first occurrence of any of the value of the small sub-range in a collection, we can use find_first_of.</p>
+          <div class="code">
+            std::find_first_of()
+          </div>
+          </br>
+
+          <h3>Sets</h3>
+          <p>A set in C++ is actually just a sorted collection. It can be a Suit-set which happen to be sorted or it can be sorted-vector. The operation on sets look very similar to mathematical operation on sets.</p>
+          <p>Set_difference</br>This algorithm returns what elements which are present in first collection but Not in second collection. This has linear complexity</p>
+          <div class="code">
+            std::set_difference()
+          </div>
+
+          <p>Set_intersection</br>This algorithm returns the elements which are common to both first and second collection.</p>
+          <div class="code">
+            std::set_intersection()
+          </div>
+
+          <p>Set_union</br>This algorithm returns the combined elements of both first and second collection.</p>
+          <div class="code">
+            std::set_union()
+          </div>
+
+          <p>Set_symmetric_difference</br>This algorithm returns the elements which are exclusive to each other which means elements as shown in Figure below.</p>
+          <div class="code">
+            std::set_symmetric_difference()
+          </div>
+
+          <p>Includes</br>This algorithm returns a boolean indicating whether all the elements of second collection form a sub set of first collection as shown in the figure below.</p>
+          <div class="code">
+            std::includes()
+          </div>
+
+          <p>Merge</br>This algorithm takes in two sorted collections and returns one sorted collection having member elements of both the individual sorted algorithms used as input.</p>
+          <div class="code">
+            std::merge()
+          </div>
+          </br>
+
+          <h3>Movers</h3>
+          <p>This section has probably some of the easiest algorithms which you can find useful on a day-to-day basis.</p>
+          <p>Copy</br>This algorithm copies the elements from source collection to destination collection defined by the address.</p>
+          <div class="code">
+            std::copy()
+          </div>
+
+          <p>Move</br>This algorithm moves the elements from source collection to destination collection which means it copies the elements from source collection to destination collection and then deletes from the original source location.</p>
+          <div class="code">
+            std::move()
+          </div>
+
+          <p>swap_ranges</br>This algorithm interchanges the contents of two collections.</p>
+          <div class="code">
+            std::swap_ranges()
+          </div>
+
+          <p>copy_backwards</br>This algorithm copies the elements starting from back. One use case could be when we need to copy some elements of the source collection partially to overwrite other elements in the same collection as shown in the figure below.</p>
+          <div class="code">
+            std::copy_backwards()
+          </div>
+
+          <p>Move_backwards</br>This algorithm works similar to copy_backwards, but it deletes elements from source once it has copied successfully to destination.</p>
+          <div class="code">
+            std::move_backwards()
+          </div>
+          </br>
+
+          <h3>Modifiers</h3>
+          <p>Modifiers simply change the value of the elements of a collection.</p>
+          <p>Fill</br>To fill all elements of a collection with a specific value, we can use this algorithm.</p>
+          <div class="code">
+            std::fill()
+          </div>
+
+          <p>Generate</br>This algorithm is used to generate random numbers up until the input number.</p>
+          <div class="code">
+            std::generate()
+          </div>
+          </br>
+
+          <h3>Bonus: Prefix/Suffix</h3>
+          <p>There also exist some keywords which are used as prefix and some as suffix to the already existing algorithms changing the algorithm’s functionality slightly. Following is the list of prefix and suffix used :-</p>
+          <div class="code">
+            stable_* &nbsp; stable_sort()</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stable_partition()
+          </div>
+          </br>
+          <div class="code">
+            is_* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is_sorted()</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is_partitioned()</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is_heap()
+          </div>
+          </br>
+          <div class="code">
+            is_*_until &nbsp;is_sorted_until()</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is_partitioned_until()</br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is_heap_until()
+          </div>
+
+          <p>All these algorithms are easy to understand and can be used in day to day programming which essentially make tasks easier to execute. You can practice with just a few algorithms from each section and soon you will find all the other algorithms easy to comprehend. This will also instill the knowledge of writing your own algorithms.</p>
+
+        </div>
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function(){
+          this.page.url = 'https://simarmannsingh.de/top10stlalgorithms.html';
+          this.page.identifier = '';          
+        };
+        (function() {
+          var d = document;
+          var s = d.createElement('script');
+          s.src = 'https://simarmannsingh-de.disqus.com/embed.js'
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable Javascript to run a third party plugin Disqus which will enable you to view and post comments related to this blog post. Developer and maintainer of this blog is trying to implement an independent and open source comment box but has not finished yet, meanwhile using Disqus plugin. </noscript>
+    </div>
+    <div id="subscribe-btn-email" class="subscribe-btn">
+      <span>Subscribe</span>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>   
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://facebook.com/simarms" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">Copyright &copy; simarmannsingh.de  |   2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="bg-modal">
+    <div class="bg-content">
+      <form action="https://ml.kundenserver.de/cgi-bin/mailinglist.cgi" method="POST" >
+        <div id="subsribe-close-button" class="close">+</div>
+        <img src="./img/emailIcon.png" width="80px" alt="">
+        <br/>
+        <input checked name="subscribe_r" type="hidden" value="subscribe">      
+        <span>Get email notifications for new posts</span>
+        <br/>
+        <input maxlength="35" name="mailaccount_r" size="30" placeholder="Please enter your Email address" type="text">
+        <br/>      
+        <input maxlength="35" name="mailaccount2_r" size="30" placeholder="Enter your Email Address again" type="text">
+        <br/>
+        <input type="SUBMIT" class="btn" value="Subscribe">          
+        <input name="FBMLNAME" type="hidden" value="press@simarmannsingh.de">
+        <input name="FBLANG" type="hidden" value="de">
+        <input name="FBURLERROR_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/error.de.html">
+        <input name="FBURLSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/subscribe.de.html">
+        <input name="FBURLUNSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/unsubscribe.de.html">
+        <input name="FBURLINVALID_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/invalid.de.html">
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>

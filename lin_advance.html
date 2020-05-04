@@ -49,8 +49,8 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" >
-    <div class="overlay tint" style="background-image: url('img/post_2_background3-1.jpg'); filter:blur(2px); -webkit-filter: blur(2px);" ></div>
+  <header class="masthead" style="background-image: url('img/Backgrounds/lin_advancecover.svg');" >
+    <div class="overlay tint" ></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -87,21 +87,21 @@
           <p>Now as the filament moves across the tube enclosing the filament, it often tends to build pressure. In other words, when the extruder which is connected to a motor, pushes the filament in the tube, towards the hot-end, filament forms wave like structure. And the reason for this is simple. The size of nozzle opening is usually of the range 0.4 mm while a filament is 1.75 mm thick in girth. When the PLA melts, it oozes out of nozzle at a fixes pace. If the extruder pushes the filament more towards the hot-end, the filament would end up building some pressure in the tube and hence it will form some kind of wave inside the tube as shown in figure 2 below. Now, even if the extruder has stopped pushing the filament towards the hot-end, the pressure already built up inside the tube needs to be release and there is only one opening from where it can be released, the Nozzle. Therefore, the nozzle end up oozing out a little extra material, which it should NOT.</p>
           
           <figure>
-            <img src="./img/2019/12/linearadvance3.svg" class="blog-img" width="80%" alt="Filament with pressure built-up resulting in wave like structure">
+            <img src="./img/2019/12/lin_advance3.svg" class="blog-img" width="80%" alt="Filament with pressure built-up resulting in wave like structure">
             <figcaption style="font-size: 15px; text-align: center;">Figure 2: Filament with pressure built-up resulting in wave like structure</figcaption>          
           </figure>
           
           <p>Due to this phenomenon, the layers we get are not uniform. If we take a closer look on each layer, it will have regions with under-extrusion which happen as the hot-end quickly starts moving at the beginning of layer, then comes good-extrusion which is region with even layer thickness and finally the layer end has region with over-extrusion which appears like a BLOB which forms as the nozzle keeps oozing out PLA even after the hot-end has stopped moving at the end of layer printing, as shown in figure 3.</p>
           
           <figure>
-            <img src="./img/2019/12/linearadvance.svg" class="blog-img" width="80%" alt="Regions of each layer while printing">
+            <img src="./img/2019/12/lin_advance.svg" class="blog-img" width="80%" alt="Regions of each layer while printing">
             <figcaption style="font-size: 15px; text-align: center;">Figure 3: Regions of each layer while printing</figcaption>          
           </figure>
           
           <p>This will cause 3D prints to have unwanted tiny blobs at the ends of each horizontal layer as shown in figure 4. The blobs are exaggerated slightly to make the blob effect conspicuous. However, this problem of extra material oozing out of nozzle, can be mitigated by enabling the Linear Advance.</p>
           
           <figure>
-            <img src="./img/2019/12/linearadvance2.svg" class="blog-img" width="80%" alt="Blob formation at the end of each horizontal layer">
+            <img src="./img/2019/12/lin_advance2.svg" class="blog-img" width="80%" alt="Blob formation at the end of each horizontal layer">
             <figcaption style="font-size: 15px; text-align: center;">Figure 4: Blob formation at the end of each horizontal layer</figcaption>          
           </figure>
           
@@ -177,19 +177,19 @@
           <p>In case you still face issues, check out the video tutorial below by Thomas Sanladerer on how to upgrade Marlin Firmware.</p>
 
           <span>
-            <a style="width:220px; margin-right: 15px;" href="https://marlinfw.org/meta/download/" class="btn" type="submit">Download Marlin</a>
+            <a style="width:220px; margin-right: 15px;" href="https://marlinfw.org/meta/download/" target="_blank" class="btn" type="submit">Download Marlin</a>
           </span>
           
           <span>
-            <a style="width:220px;" href="https://www.arduino.cc/en/main/software" class="btn" type="submit">Download Arduino</a>
+            <a style="width:220px;" href="https://www.arduino.cc/en/main/software" target="_blank" class="btn" type="submit">Download Arduino</a>
           </span>
           </br>
           </br>
           <span>
-            <a style="width:220px; margin-right: 15px;" href="https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls" class="btn" type="submit">Printer Boards</a>
+            <a style="width:220px; margin-right: 15px;" href="https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls" target="_blank" class="btn" type="submit">Printer Boards</a>
           </span>          
           <span>
-            <a style="width:220px;" href="https://bintray.com/olikraus/u8glib/Arduino/" class="btn" type="submit">U8Glib Library</a>
+            <a style="width:220px;" href="https://bintray.com/olikraus/u8glib/Arduino/" class="btn" target="_blank" type="submit">U8Glib Library</a>
           </span>
           </br>
           </br>
@@ -205,7 +205,7 @@
       <div id="disqus_thread"></div>
       <script>
         var disqus_config = function(){
-          this.page.url = 'http://127.0.0.1:5500/post_2.html';
+          this.page.url = 'https://simarmannsingh.de/lin_advance.html';
           this.page.identifier = PAGE_IDENTIFIER;          
         };
         (function() {
