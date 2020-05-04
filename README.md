@@ -1,68 +1,34 @@
-# [Blog](https://startbootstrap.com/template-overviews/clean-blog/)
+# [Blog](https://simarmannsingh.de/)
 
-[Blog](https://startbootstrap.com/template-overviews/clean-blog/) is a stylish, responsive blog theme for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). 
-
-## Preview
-
-[![Blog Preview]](https://blackrockdigital.github.io/startbootstrap-clean-blog/)
-
-**[View Live Preview](https://simarmannsingh.de/)**
-
-## Status
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-clean-blog/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-clean-blog.svg)](https://www.npmjs.com/package/startbootstrap-clean-blog)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-clean-blog.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-clean-blog)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-clean-blog?type=dev)
-
-## Download and Installation
-
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/clean-blog/)
-* Install via npm: `npm i startbootstrap-clean-blog`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-clean-blog.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-clean-blog)
-
-## Usage
-
-### Basic Usage
-
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
-
-### Advanced Usage
-
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
-
-#### Gulp Tasks
-
-- `gulp` the default task that builds everything
-- `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
-
-You must have npm installed globally in order to use this build environment.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-clean-blog/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/themes/clean-blog/).
+![Blog Preview](https://github.com/simarmannsingh/personalblog/blob/gh-pages/preview.png "Preview generated as on 4th May 2020")
 
 ## About
 
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
+This is the public repository which serves as the web-hosting for the personal blog website 
+<https://simarmannsingh.de/>. The blog is essentially a collection of lucid blog posts written
+specifically to explain technical concepts in a layman words. No-prior knowledge is required to understand the blog posts.
 
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
+Readers are encouraged to post honest opinions in comments and to share the content with their friends and family. It also helps me to clarify many concepts for myself because it is a fact that when you have to explain something to someone else, you study it thoroughly and hence you understand it better.
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](https://blackrockdigital.io/).
+Readers are encourage to also start writing blogs themselves and try to write it in as easy language as possible. You can share your links with me via email or you can also post them as comments on my blog post. However, please do NOT spam the links everywhere.
 
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
 
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+## Security and Data Collection
+I am pleased to announce that the website collects no user data whatsoever, absolutely NONE. As a matter of fact, I hate the websites which keep tracking the user's activity by placing cookies. You can check for yourself that this website does not use any cookie at all.
+
+However, For the secure functioning of the website itself, the CloudFlare Servers uses one cookie 
+called **_cfduid**. The cookie does not collect any kind of data, but it serves the purpose of authenticating a user. So, the servers can know if it is a bonafied user or a malicious program/hacker trying to break in.
+How does the cookie do that? The cookie randomly generates a unique number long (long enough to be unique) and stores that number as a cookie. So whenever the user makes a request again, the same cookies is sent to the server authenticating that the user is indeed a genuine user. This also serves in distinguishing the number of views (or hits) a website gets as the subsequent requests containing a cookie are not considered multiple views. So, no matter how many times a user views the contents, it is still counted as one view, until the cookie is destroyed and a new cookie is fetched from the server.
+Further details about the functioning of this specific cookie can be found [here](https://support.cloudflare.com/hc/en-us/articles/200170156-Understanding-the-Cloudflare-Cookies#12345682)
 
 ## Copyright and License
 
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/gh-pages/LICENSE) license.
+Copyright 2020 Simar Mann Singh Chawala. Code released under the [MIT](https://github.com/simarmannsingh/personalblog/blob/gh-pages/LICENSE) license.
+
+All the text content written on the blog, many of the illustrations are copyrighted content and hence cannot be used for personal or commercial purposes without permission. No part or whole of the blog post can be reproduced without permission. However, readers are allowed to use the content and infact encouraged to do so, provided they give proper credits to the author. At this point, I would like to mention that the template that this website is based on (called startBootstrap), is not my copyrighted content. It is an open-source Bootstrap project with an MIT license.
+
+I would like to thank (and give credit to) David Miller, the founder of Start Bootstrap project. He is also the founder of BlackrockDigital LLC, the company name he operates under. Further details about David can be found on his website http://davidmiller.io.
+
+Readers are encouraged to visit the website <https://simarmannsingh.de> and comment after reading the blog posts. All a Blogger wants is to share his ideas with the world and seeks nothing in return.
+
+*The present day world needs more Open-source developers than everything else.*
