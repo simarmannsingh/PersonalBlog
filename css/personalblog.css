@@ -480,3 +480,331 @@ footer .copyright {
     transform: rotate(45deg);
     cursor: pointer;
   }
+
+
+  
+  /*==============================================*/
+  /*---------------- Media Queries ---------------*/
+  /*==============================================*/
+
+  @media only screen and (max-width: 600px)     /* For devices upto and less : 600px  */
+  {
+    body {
+      font-size: 15px;
+    }
+    #mainNav .navbar-nav>li.nav-item>a {
+      font-size: 12px;
+    }
+    .col-lg-8 .col-md-10 .mx-auto{
+      padding: 4px;
+    }
+    header.masthead{               
+      margin-bottom: 5px;      
+      background: no-repeat center;
+      background-size: contain;      
+    }
+    .post-preview>a>.post-title {
+      font-size: 23px;
+    }
+    .post-subtitle{
+      text-align: justify;
+      font-size: 16px;
+    }
+    .post-preview>.post-meta {
+      font-size: 17px;
+      padding: 0 2px;
+    }
+    .btn{
+      width: auto;
+      height: 30px;
+      font-size: 12px;      
+      border-radius: 5px;  
+      font-weight: 800;  
+      letter-spacing: 0px;  
+    }
+    .code {     
+      font-size: 14px;
+      padding: 8px;
+      border: 1px solid black;
+    }
+    h3{
+      margin-top: 8px;
+    }
+    ul,ol,dl{
+      font-size: 0.8rem;
+      margin: 8px;      
+    }
+    .bg-content{
+      width: 90%;
+      height: 45%;
+      border-radius: 8px;        
+      padding: 8px;
+    }
+    input {    
+      margin: 8px auto;
+      font-size: 14px;
+    }    
+  }
+
+  @media only screen and (min-width: 600px)    /* For devices         min-> 600px */
+  {
+    body {
+      font-size: 15px;
+    }
+    #mainNav .navbar-nav>li.nav-item>a {
+      font-size: 12px;
+    }
+    .col-lg-8 .col-md-10 .mx-auto{
+      padding: 4px;
+    }
+    .code {     
+      font-size: 14px;
+      padding: 8px;
+      border: 1px solid black;
+    }
+    .btn{
+      width: auto;
+      height: 36px;
+      font-size: 14px;      
+      border-radius: 5px;  
+      font-weight: 800;  
+      letter-spacing: 0px;  
+    }
+    header.masthead{   
+      margin-bottom: 5px;
+      background: no-repeat center;
+      background-size: 100%;      
+    }
+    .bg-content{
+      width: 60%;
+      height: 30%;
+      border-radius: 8px;        
+      padding: 8px;
+    }
+   
+  }
+
+  @media only screen and (min-width: 768px)     /* For devices         min-> 768px  */
+  {
+    body {
+      font-size: 20px;
+    }
+    #mainNav .navbar-nav>li.nav-item>a {
+      font-size: 18px;
+    }
+    p{      
+      font-size: 21px;
+    }
+    .col-lg-8 .col-md-10 .mx-auto{
+      padding: 8px;
+    }
+    header.masthead{   
+      margin-bottom: 5px;
+      background: no-repeat center;
+      background-size: 100%;      
+    }   
+    .post-preview>a>.post-title {
+      font-size: 28px;
+    }    
+    .post-subtitle{
+      text-align: justify;
+      font-size: 22px;
+    }
+    .post-preview>.post-meta {
+      font-size: 19px;
+      padding: 0 2px;
+    }
+    .btn{
+      width: auto;
+      height: 45px;
+      font-size: 19px;
+      border: solid 1px transparent;
+      border-radius: 5px;  
+      font-weight: 800;  
+      letter-spacing: 1px;  
+    }
+    .code {     
+      font-size: 21px;
+      padding: 8px;
+      border: 1px solid black;
+    }    
+    h3{
+      font-size: 1.6rem;
+      margin-top: 20px;
+    }
+    h6{
+      font-size: 1.15rem;
+    }
+    ul,ol,dl{
+      font-size: 1.25rem;
+      margin: 13px;      
+    }
+    .bg-modal {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);    
+      justify-content: center;       
+      align-items: center;                
+      display: none;    
+      z-index: 100;
+    }
+    .bg-content{
+      width: 55%;
+      height: 30%;
+      border-radius: 8px;        
+      padding: 17px;
+    }
+    input {    
+      margin: 8px auto;
+      font-size: 14px;
+    }    
+  }
+
+  @media only screen and (min-width: 992px)   /* For devices         min-> 992px  */
+  {
+    .bg-content{
+      width: 45%;
+      height: 23%;
+      border-radius: 8px;        
+      padding: 17px;
+    }
+    input {    
+      margin: 8px auto;
+      font-size: 16px;
+    } 
+    .code {     
+      font-size: 21px;
+      padding: 8px;
+      border: 1px solid black;
+    } 
+  }
+
+  @media only screen and (min-width: 1200px)  /* For devices         min-> 1200px  */
+  {    
+    body {
+      font-size: 18px;
+    }
+    p{      
+      font-size: 21px;
+    }
+    .code {     
+      font-size: 21px;
+      padding: 8px;
+      border: 1px solid black;
+    } 
+    #mainNav.is-fixed{
+      position: sticky;
+      top: -100px;
+    }
+    .post-preview>a>.post-title {
+      font-size: 24px;
+    }    
+    .post-subtitle{
+      text-align: justify;
+      font-size: 20px;
+    }
+    .post-preview>.post-meta {
+      font-size: 20px;
+      padding: 0 2px;
+    }
+    .bg-content{
+      width: 40%;
+      height: 45%;
+      border-radius: 8px;        
+      padding: 17px;
+    }
+    input {    
+      margin: 4px auto;
+      font-size: 12px;
+    } 
+  }
+  @media only screen and (min-width: 1400px)    /* For devices         min-> 1400px  */
+  {
+    .bg-content{
+      width: 42%;
+      height: 38%;
+      border-radius: 8px;        
+      padding: 17px;
+    }
+    input {    
+      margin: 8px auto;
+      font-size: 16px;
+    } 
+  }
+  @media only screen and (min-width: 2500px)    /* For devices         min-> 2560px  */
+  {
+    body {
+      font-size: 32px;
+    }
+    .container{
+      max-width: 1800px;
+    }
+    #mainNav .navbar-nav>li.nav-item>a {
+      font-size: 22px;
+    }
+    p{      
+      font-size: 28px;
+    }
+    .col-lg-8 .col-md-10 .mx-auto{
+      padding: 8px;
+    }
+    header.masthead{   
+      margin-bottom: 5px;
+      padding: 230px;
+      background: no-repeat center;
+      background-size: 100%;      
+    }   
+    .post-preview>a>.post-title {
+      font-size: 32px;
+    }    
+    .post-subtitle{
+      text-align: justify;
+      font-size: 26px;
+    }
+    .post-preview>.post-meta {
+      font-size: 26px;
+      padding: 0 2px;
+    }
+    h2{
+      font-size: 1.85em;
+    }
+    h3{
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+    h6{
+      font-size: 1.15em;
+      margin-top: 10px;
+    }
+    ul,ol,dl{
+      font-size: 28px;
+      margin: 13px;      
+    }
+    .bg-content{
+      width: 30%;
+      height: 25%;
+      border-radius: 8px;        
+      padding: 17px;
+    }
+    input {    
+      margin: 8px auto;
+      font-size: 24px;
+    }
+    .subscribe-btn {
+      width: 230px;
+      height: 50px;
+    }  
+    .subscribe-btn span{
+      font-weight: 500;
+    }  
+    .subscribe-btn :active{
+      box-shadow: 0 0 ;
+    }
+    .close {     
+      right: 20px;
+      font-size: 60px;      
+    }
+  }
+ 
