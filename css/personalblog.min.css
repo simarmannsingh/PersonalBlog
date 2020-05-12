@@ -321,6 +321,20 @@
       margin: 8px auto;
       font-size: 14px;
     }    
+    .iframe-container{
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+     }
+   
+     .iframe-content{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: 0;
+     }
   }
 
   @media only screen and (min-width: 600px)    /* For devices         min-> 600px */
@@ -358,6 +372,20 @@
       border-radius: 8px;        
       padding: 8px;
     }
+    .iframe-container{
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+     }
+   
+     .iframe-content{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: 0;
+     }
    
   }
 
@@ -436,7 +464,21 @@
     input {    
       margin: 8px auto;
       font-size: 14px;
-    }    
+    }   
+    .iframe-container{
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+    }   
+    .iframe-content
+    {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    } 
   }
 
   @media only screen and (min-width: 992px)   /* For devices         min-> 992px  */
@@ -456,6 +498,20 @@
       padding: 8px;
       border: 1px solid black;
     } 
+    .iframe-container{
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+     }
+   
+     .iframe-content{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: 0;
+     }
   }
 
   @media only screen and (min-width: 1200px)  /* For devices         min-> 1200px  */
@@ -495,7 +551,21 @@
     input {    
       margin: 4px auto;
       font-size: 12px;
-    } 
+    }
+    .iframe-container{
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+     }
+   
+     .iframe-content{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: 0;
+     }
   }
   @media only screen and (min-width: 1400px)    /* For devices         min-> 1400px  */
   {
@@ -508,7 +578,21 @@
     input {    
       margin: 8px auto;
       font-size: 16px;
-    } 
+    }
+    .iframe-container{
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+     }
+   
+     .iframe-content{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: 0;
+     }
   }
   @media only screen and (min-width: 2500px)    /* For devices         min-> 2560px  */
   {
@@ -583,5 +667,19 @@
       right: 20px;
       font-size: 60px;      
     }
+    .iframe-container{
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%;
+     }
+   
+     .iframe-content{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border: 0;
+     }
   }
  
