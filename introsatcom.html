@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * ; 
+  style-src 'self' fonts.googleapis.com 'unsafe-inline' https://c.disquscdn.com/;
+  img-src   'self' c.disquscdn.com referrer.disqus.com ; 
+  script-src 'self' 
+    'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='
+    'sha256-kxxahOucuAJqqQTuHFva+LAt68418DXvYhPdJVu6WKA='
+    'sha256-SrvyepyxELjannhqUk37dbhItiOTizEq1htXlcM5vmU='
+    'sha256-Zt8Bo5DUukFYQGC7un+6wiXNCjy1RHDGy33Pf49dwL8='
+    ajax.cloudflare.com
+    *.disqus.com
+    https://simarmannsingh-de.disqus.com/embed.js; ">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Satellite communication is an extremely important medium of communication nowadays. It provides long distance communication service to a wider region. Once...">
+  <meta name="author" content="SIMAR MANN SINGH">
+
+  <title>Introduction to Satellite Communication</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/personalblog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/Backgrounds/demystify_3d_cover.svg');" >
+    <div class="overlay tint" ></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Introduction to Satellite Communication</h1>
+            <h2 class="subheading">  </h2>
+            <span class="meta">Posted by
+              <a href="#">Simar</a>
+              on July 15, 2018</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">      
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto" style="text-align:justify;">
+          </br>
+          <h3>Introduction</h3>
+          <p>Satellite communication is an extremely important medium of communication nowadays. It provides long distance communication service to a wider region. Once the satellite is launched into space, all it needs is a ground station transceiver, which could transmit and receive the signals. Also, it doesn’t need regular maintenance.</p>
+          <p>What’s interesting about this medium of communication is that there is no interference from other sources of EM wave which is a major problem in other terrain communication.</p>
+          <p>It is highly reliable as it is unaffected and remains operational in case of any natural or manmade disaster when other modes of communications like telephone, Wired or wireless internet, fiber communication etc. incur severe damage.</p>
+          <p>Cost is another deciding factor. In the case of satellite communication, the initial cost of launching a satellite into space is high but with the advancement in technology, that initial cost is also decreasing every year. This year, the ISRO was in headlines for launching a record number of 104 nanosatellites into different orbits in one single launch.</p>
+          <p>Apart from all the above factors, what makes satellite communication an attractive alternative medium of communication is the number of applications it supports- for weather forecasting, radio/TV signal broadcasting, gathering intelligence in the military, navigation of ships and aircraft, global mobile communication, connecting remote areas etc.</p>
+
+          <h3>A Simple Satellite Transmission</h3>
+          <p>A simple communication system basically consists of 5 main components- a data source which generates useful and meaningful information , a transmitter which transmits that information, a channel through which the information is relayed, a receiver which receives that information and an information sink or a user of that information (for which information was meant).</p>
+          
+          <figure>
+            <img src="./img/2017/09/wordpress-cover-pic.png" class="blog-img" width="100%" alt="Basic Building Blocks of the Satellite Communication System">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 1: Basic Building Blocks of the Satellite Communication System</figcaption>
+          </figure>
+
+          <p>In case of satellite communication, the data source can be any device which is capable of producing meaningful data in any form- analog or digital, the data can be a song, text, video, image etc. Ultimately any digital data is in binary format- 1’s and 0s.</p>
+          <p>The task of Transmitter is to encode the data, encrypt it and transmit the data through the channel. Just to give you an idea what encoding and encryption mean, “encoding is reducing the total number of bits that carry the same information” And how we exactly do that? By assigning a symbol to a block of 1’s and 0’s and transmitting that block. Encryption simply means scrambling the symbols in a way so that it can be securely transmitted without being accessed by anyone who is not authorized to.</p>
+          <p>So, let’s just take a look at the extended block diagram.</p>
+
+          <figure>
+            <img src="./img/2017/09/wordpress-pic-3.png" class="blog-img" width="100%" alt="Extended Block Diagram for Satellite Communication">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 2: Extended Block Diagram for Satellite Communication</figcaption>
+          </figure>
+
+          <p>The bits are clubbed together and mapped into symbols using APSK mapper. The symbols need some medium to physically carry the information they contain to the receiver via the channel. This physical medium, in case of satellite communication, is provided by Radio Frequency (RF) waves.  But to transmit the RF waves via the channel, we need to transform the symbols into the wave. This is done by a modulator.</p>
+          <p>In satellite communication, we transmit data using high-frequency RF waves from different regions of the spectrum- Ka band, Ku band, C band etc. But for any digital communication signal, a decision must be made as to how the data that is to be transmitted will be applied to the RF carrier pulse i.e., which symbols get mapped to which frequency (in case of FSK) or which symbol gets mapped to which amplitude level (in case of ASK). For this, we take help of the Constellation diagram. A constellation diagram is a representation of the symbols in I-Q plane (In-phase and Quadrature-phase plane). As can be seen in the constellation diagram (fig. 3), the states closer to the origin or the inner states are lower power states and may not be distorted, while the outer states undergo more distortion.</p>
+
+          <figure>
+            <img src="./img/2017/09/wordpress-pic-2.png" class="blog-img" width="100%" alt="Constellation Diagram for 64QAM and 64APSK signals">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 3: Constellation Diagram for 64QAM and 64APSK signals</figcaption>
+          </figure>
+
+          <p>One type of distortion (AM/AM) causes the outer symbols to move inwards or towards the center of the constellation relative to inner symbols. Another type of distortion (AM/PM) will affect the phase of the outer states which causes the outer symbols to rotate around the origin relative to the inner states</p>
+          <p>To counter this distortion at higher frequencies, APSK was designed and is being used extensively nowadays in Satellite Communication. In APSK, the symbols in the constellation diagram are placed uniformly in multiple concentric rings depending on their representation of power states. Symbols which represent higher power states are placed in the outer most ring while the symbols which represent lower power states are close to the origin.</p>
+          
+        </div>
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function(){
+          this.page.url = 'https://simarmannsingh.de/introsatcom.html';
+          this.page.identifier = '';          
+        };
+        (function() {
+          var d = document;
+          var s = d.createElement('script');
+          s.src = 'https://simarmannsingh-de.disqus.com/embed.js'
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable Javascript to run a third party plugin Disqus which will enable you to view and post comments related to this blog post. Developer and maintainer of this blog is trying to implement an independent and open source comment box but has not finished yet, meanwhile using Disqus plugin. </noscript>
+    </div>
+    <div id="subscribe-btn-email" class="subscribe-btn">
+      <span>Subscribe</span>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>   
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://facebook.com/simarms" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">Copyright &copy; simarmannsingh.de  |   2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="bg-modal">
+    <div class="bg-content">
+      <form action="https://ml.kundenserver.de/cgi-bin/mailinglist.cgi" method="POST" >
+        <div id="subsribe-close-button" class="close">+</div>
+        <img src="./img/emailIcon.png" width="80px" alt="">
+        <br/>
+        <input checked name="subscribe_r" type="hidden" value="subscribe">      
+        <span>Get email notifications for new posts</span>
+        <br/>
+        <input maxlength="35" name="mailaccount_r" size="30" placeholder="Please enter your Email address" type="text">
+        <br/>      
+        <input maxlength="35" name="mailaccount2_r" size="30" placeholder="Enter your Email Address again" type="text">
+        <br/>
+        <input type="SUBMIT" class="btn" value="Subscribe">          
+        <input name="FBMLNAME" type="hidden" value="press@simarmannsingh.de">
+        <input name="FBLANG" type="hidden" value="de">
+        <input name="FBURLERROR_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/error.de.html">
+        <input name="FBURLSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/subscribe.de.html">
+        <input name="FBURLUNSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/unsubscribe.de.html">
+        <input name="FBURLINVALID_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/invalid.de.html">
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * ; 
+  style-src 'self' fonts.googleapis.com 'unsafe-inline' https://c.disquscdn.com/;
+  img-src   'self' c.disquscdn.com referrer.disqus.com ; 
+  script-src 'self' 
+    'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='
+    'sha256-SrvyepyxELjannhqUk37dbhItiOTizEq1htXlcM5vmU='
+    'sha256-aTItWJ0Cl7/0IdkPC6kEDlmbcbll+8YJHl/KSjIjUnY='
+    ajax.cloudflare.com
+    *.disqus.com
+    https://simarmannsingh-de.disqus.com/embed.js; ">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="India is increasingly using space technology for its development of which satellite communications is a major component. Now the communication Satellites are..">
+  <meta name="author" content="SIMAR MANN SINGH">
+
+  <title>APSK Signal evaluation in case of DVB-S2X using Error Vector Magnitude(EVM) and Bit Error Rate(BER)</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/personalblog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/Backgrounds/demystify_3d_cover.svg');" >
+    <div class="overlay tint" ></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>APSK Signal evaluation in case of DVB-S2X using Error Vector Magnitude(EVM) and Bit Error Rate(BER)</h1>
+            <h2 class="subheading">  </h2>
+            <span class="meta">Posted by
+              <a href="#">Simar</a>
+              on July 15, 2018</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">      
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto" style="text-align:justify;">
+          </br>
+          
+          <p>India is increasingly using space technology for its development of which satellite communications is a major component. Now the communication Satellites are generally designed to work in the microwave band of the spectrum, so they can also be called as Microwave Repeater.</p>
+          <p>Analog Signals, being more susceptible to noise and interference, are being replaced by their digital counterparts. Transmission at physical layer still takes place in analog but the processing of signals is done in the digital domain</p>
+          
+          <h3>DIGITAL TELEVISION</h3>
+          <p><b>Digital Television (DTV)</b> is the transmission of audio and video by digitally processed and multiplexed signal, in contrast to the totally analog and channel separated signals used by analog television. Digital TV can support more than one program in the same channel bandwidth. Several regions of the world are in different stages of adaptation and are implementing different broadcasting standards. Below are the different widely used digital television broadcasting standards (DTB):</p>
+          <ul>
+              <li>
+                  <p><b>Digital Video Broadcasting (DVB)</b> uses coded orthogonal frequency-division multiplexing (OFDM) modulation and supports hierarchical transmission. This standard has been adopted in Europe, Singapore, Australia and New Zealand.</p>
+              </li>
+              <li>
+                  <p><b>Advanced Television System Committee (ATSC)</b> uses eight-level vestigial sideband (8VSB) for terrestrial broadcasting. This standard has been adopted by six countries: United States, Canada, Mexico, South Korea, Dominican Republic and Honduras.</p>
+              </li>
+              <li>
+                  <p><b>Integrated Services Digital Broadcasting (ISDB)</b> utilizes OFDM and two-dimensional interleaving and has been adopted in Japan and the Philippines.</p>
+              </li>
+              <li>
+                  <p><b>Digital Terrestrial Multimedia Broadcasting (DTMB)</b> adopts time-domain synchronous (TDS) OFDM technology with a pseudo-random signal frame to serve as the guard interval (GI) of the OFDM block and the training symbol. The DTMB standard has been adopted in the People’s Republic of China, including Hong Kong and Macau.</p>
+              </li>
+              <li>
+                  <p><b>Digital Multimedia Broadcasting (DMB)</b> is a digital radio transmission technology developed in South Korea as part of the national IT project for sending multimedia such as TV, radio, and datacasting to mobile devices such as mobile phones, laptops, and GPS navigation systems.</p>
+              </li>              
+          </ul>
+
+          <h3>Digital Video Broadcasting</h3>
+          <p><b>Digital Video Broadcasting (DVB)</b> is a set of standards designed to broadcast video and audio signals via various channels including cable channel, Satellite channel, terrestrial channel and Microwave channel. They are maintained by an international industry consortium with more than 270 members and are published by European Telecommunications Standards Institute (ETSI). DVB distribute data using a variety of approaches including  DVB-C (DVB Cable), DVB-S (DVB Satellite), DVB-T (DVB Terrestrial ) and DVB-M (DVB Microwave).</p>
+          <p><i>How is Satellite channel different from other terrestrial channels?</i></br>Well, A Satellite channel has no ‘Multipath Effect’. It is a non-linear transmission channel having limited resources on board</p>
+          <p>Nonlinear characteristics of the satellite channel largely depend on the High power amplifier (HPA) used at the satellite transponder. The HPA nonlinearity changes both the amplitude and relative positions of the constellation points of the transmitted signal, thus distorting the signal.</p>
+
+          <h3>DVB for Satellite Channel (DVB-S)</h3>
+          <p>DVB-S was introduced in 1995 for the transmission of video signals over the satellite channel. With the advent of advanced video encoding techniques like H.264 and H.265 (a video compression technique which helps compress higher resolution videos and allow smooth playback by the processors on board of any computing device- also called HDTV), a higher data rate transmission system was required to transmit these HDTV signals over the satellite channel.</p>
+          <p>In 2003, the second generation of DVB-S was developed and was called DVB-S2 (DVB-S second generation). It had higher bandwidth efficiency, higher transmission rates and was more robust against transmission errors. It employed APSK modulation for the first time for transmission of video signals over the satellite channel. Two new key features that were added compared to the DVB-S standard are:</p>
+          <ul>
+              <li>A powerful coding scheme based on a modern LDPC code. For low encoding complexity, the LDPC codes chosen have a special structure, also known as Irregular Repeat-Accumulate codes.</li>
+              <li>VCM (Variable Coding and Modulation) and ACM (Adaptive Coding and Modulation) modes, which allow optimizing bandwidth utilization by dynamically changing transmission parameters.</li>
+          </ul>
+          <p>In 2014, DVB-S2X (stands for DVB-S2 extension) was introduced which is the advanced version of DVB-S2. It uses higher order APSK modulation techniques which greatly increases the bandwidth efficiency allowing more data to be sent over the same Satellite channel.</p>
+
+          <h3>Constellation Diagram</h3>
+          <p>A <b>constellation diagram</b> is a representation of a signal modulated by a digital modulation scheme such as quadrature amplitude modulation or phase-shift keying.[1] It displays the signal as a two-dimensional XY-plane scatter diagram in the complex plane at symbol sampling instants. In a more abstract sense, it represents the possible symbols that may be selected by a given modulation scheme as points in the complex plane. Measured constellation diagrams can be used to recognize the type of interference and distortion in a signal</p>
+
+          <h3>Interfering Tone or Spur</h3>
+          <p>An interfering signal can cause the amplitude and phase of the transmitted signal to be different each time the signal passes through the same state. This will result in a spread at the symbol locations in the constellation diagram. The random smearing of the points indicates noise, <i>but a circling of the symbols around the constellation states indicates there may be a spur or interfering tone</i></p>
+          <p>The radius of the circle is proportional to the amplitude of the interfering signal, but this display format contains no information about the interfering frequency, which may be the key to identifying the cause. The presence of spurs on a modulated signal may be difficult to determine on a constellation display or through spectrum analysis. An alternative parameter can be used to check signal quality: EVM</p>
+          <p>The magnitude of the error vector versus time graph may hint that the error observed is sinusoidal in nature, but what is really needed is a method to determine the frequency of the spur.</p>
+          <p>The error vector spectrum can indicate the frequency of spurious signals that cannot be observed on traditional spectrum analyzers or on a constellation display. This interfering tone could cause the receiver to fail many of the performance verification tests.</p>
+
+          <h3>BER</h3>
+          <p>Bit Error Rate(BER) is usually considered by many to be the best measurement to verify receiver performance but BER testing is not always possible in the subsystems of a Digital Radio Receiver.</p>
+          <p>BER can indicate a problem exists, but may not help in indicating the source of the problem. Often BER is synonymous with the other performance metrics, such as signal to  Noise Ratio (SNR), since direct relationship exists between them. However, for BER  measurements, it is incumbent that the signal must be demodulated first at the receiver side which is not required in case of EVM</p>
+          <p>Now as we know, In Satellite systems, apart from noise and interference, the channel nonlinearity also causes problems. The nonlinearity exists because the working mode of the power amplifier board is set near the saturation point in order to reach the maximum level for the transmitted signal. The nonlinear signal distortions, similarly to the noise and interference in the radio channel, are the reasons for the increase of error probability.</p>
+          <p>The setup used for calculation of BER is shown in the figure below. Data generator is a memoryless discrete source block which generates a stream of data. To increase the transmitted data per unit time, source coding is done by the APSK Mapper block which maps the generated bit sequence into different symbols</p>
+
+          <figure>
+            <img src="./img/2018/07/a1.png" class="blog-img" width="80%" alt="System Setup for BER calculation">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 1: System Setup for BER calculation </figcaption>          
+          </figure> 
+
+          <p>To enable physical transmission of these symbols over the physical medium, the symbols  is transformed into pulse using root raised cosine function with a roll-off factor of α = 0:35. The choice of pulse shaper function determines the amount of Inter-Symbol Interference (ISI), which the communication system can mitigate.</p>
+          <p>Additive White Gaussian Noise (AWGN) Channel is the simplest noise model, often used to simulate Satellite channel and deep space communication links. AWGN block performs a linear addition of independent Gaussian noise samples to its input signal. QAM (Quadrature Amplitude Modulation) implements a QAM receiver with demodulation and detection functions.</p>
+          <p>The BER analyzer block automatically determines the reference signal. BER is capable of sweeping simulation, producing swept BER output. An optional variable to be swept along with the value of each sweep can be specified using the name of a variable to sweep and the vector of values for that variable. BER block starts a new sweep when a minimun number of errors per pass has been detected or when all the symbols contained in the maximum number of trial blocks per sweep have been processed.</p>
+
+          <figure>
+            <img src="./img/2018/07/bercurve64apsk.png" class="blog-img" width="80%" alt="BER Curve for 64-APSK">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 2: BER Curve for 64-APSK </figcaption>          
+          </figure>
+
+          <h3>EVM</h3>
+          <p>An ideal signal or the signal sent by transmitter would have all the constellation points precisely at the ideal location. However, due to distortion of the signal in the channel, these constellation points end up at a different position in the receiver. This shift in the position of the constellation points is measured at the receiver. Error Vector Magnitude (EVM) is a measure of how far these constellation points are from their ideal location. The setup used for calculation of EVM is shown in the figure below. The same setup with slight modification is used, for calculating the EVM. The different blocks used here are a splitter and a Vector Signal Analyzer.</p>
+
+          <figure>
+            <img src="./img/2018/07/a2.png" class="blog-img" width="80%" alt="Setup for EVM calculation">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 3: Setup for EVM calculation </figcaption>          
+          </figure>
+
+          <p>A splitter splits the incoming signal into n-connected output ports whereas a vector signal analyzer is an instrument that measures the magnitude and phase of the input signal at a single frequency within the Intermediate Frequency bandwidth of the instrument. It gathers the reference signal and measured signal and acts as a sweep controller. The spectrum analysis by a VSA consists of two stages – down-convert & digitize stage and Digital signal processing and display stage. A portion of the input signal spectrum is down-converted (using a voltagecontrolled oscillator and a mixer) to the center frequency of a band-pass filter. The use of a voltage-controlled oscillator allows for consideration of different carrier frequencies.</p>
+          <p>After the conversion to an intermediate frequency, the signal is filtered in order to band-limit the signal and prevent aliasing. The signal is then digitized using an analog-to-digital converter. The sampling rate is often varied in relation to the frequency span under consideration.</p>
+          
+          <figure>
+            <img src="./img/2018/07/evm.png" class="blog-img" width="80%" alt="EVM Curve for 64-APSK">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 4: EVM Curve for 64-APSK </figcaption>          
+          </figure>
+          
+          <p>EVM is the Root-mean-square (RMS) value of the difference between a collection of measured symbols and ideal symbols.</p>
+
+          <h3>EVM vs BER for APSK Modulation</h3>
+          <p>After plotting the EVM values against BER, we get an EVM-BER curve which is shown below in the figure. The figure 9 below shows the EVM-BER curves for the APSK modulations like APSK-16, APSK-64, APSK-256 and APSK-512 along with QAM modulations (QAM-16 and QAM-64). The EVM-BER curve for the 16-QAM and 64-QAM are already established results which have been reconstructed to justify the correctness of the APSK plots.</p>
+
+          <figure>
+            <img src="./img/2018/07/evmvsber.jpg" class="blog-img" width="80%" alt="EVM vs BER Curve for Different APSK signals">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 5: EVM vs BER Curve for Different APSK signals </figcaption>
+          </figure>
+
+          <p>Minimum EVM required corresponding to a given value of BER can be easily determined from the figure above. While BER( 10^-5) is used by many engineers as a standard signal performance metric, it takes time to measure the signal performance. In case of a communication system that employs Automatic repeat request (ARQ) system, retransmissions cause a delay in taking BER measurement. In such cases, EVM can be helpful as it quickly sweeps through the signal and determines the quality of the signal transmission. This saves a lot of cycles which decreases the latency. Taking EVM measurements requires only a Vector signal analyzer which also measures a lot of other parameters. Hence, EVM measurement doesn’t require any special instrument which makes it cost effective.</p>
+
+        </div>
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function(){
+          this.page.url = 'https://simarmannsingh.de/apskevmber.html';
+          this.page.identifier = '';          
+        };
+        (function() {
+          var d = document;
+          var s = d.createElement('script');
+          s.src = 'https://simarmannsingh-de.disqus.com/embed.js'
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable Javascript to run a third party plugin Disqus which will enable you to view and post comments related to this blog post. Developer and maintainer of this blog is trying to implement an independent and open source comment box but has not finished yet, meanwhile using Disqus plugin. </noscript>
+    </div>
+    <div id="subscribe-btn-email" class="subscribe-btn">
+      <span>Subscribe</span>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>   
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://facebook.com/simarms" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">Copyright &copy; simarmannsingh.de  |   2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="bg-modal">
+    <div class="bg-content">
+      <form action="https://ml.kundenserver.de/cgi-bin/mailinglist.cgi" method="POST" >
+        <div id="subsribe-close-button" class="close">+</div>
+        <img src="./img/emailIcon.png" width="80px" alt="">
+        <br/>
+        <input checked name="subscribe_r" type="hidden" value="subscribe">      
+        <span>Get email notifications for new posts</span>
+        <br/>
+        <input maxlength="35" name="mailaccount_r" size="30" placeholder="Please enter your Email address" type="text">
+        <br/>      
+        <input maxlength="35" name="mailaccount2_r" size="30" placeholder="Enter your Email Address again" type="text">
+        <br/>
+        <input type="SUBMIT" class="btn" value="Subscribe">          
+        <input name="FBMLNAME" type="hidden" value="press@simarmannsingh.de">
+        <input name="FBLANG" type="hidden" value="de">
+        <input name="FBURLERROR_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/error.de.html">
+        <input name="FBURLSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/subscribe.de.html">
+        <input name="FBURLUNSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/unsubscribe.de.html">
+        <input name="FBURLINVALID_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/invalid.de.html">
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+</html>

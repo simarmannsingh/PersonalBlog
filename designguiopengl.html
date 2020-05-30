@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * ; 
+  style-src 'self' fonts.googleapis.com 'unsafe-inline' https://c.disquscdn.com/;
+  img-src   'self' c.disquscdn.com referrer.disqus.com ; 
+  script-src 'self' 
+    'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='    
+    'sha256-SrvyepyxELjannhqUk37dbhItiOTizEq1htXlcM5vmU='
+    'sha256-Yzy7hO6C9c6ExkXu4Y805Q3Eqp4Vumgv7baQdId/8Fc='
+    ajax.cloudflare.com
+    *.disqus.com
+    https://simarmannsingh-de.disqus.com/embed.js; ">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="We can generate Computer graphics using many different ways.  For example, We can choose to use specifications like OpenGL, Direct3D, Vulkan etc. But OpenGL...">
+  <meta name="author" content="SIMAR MANN SINGH">
+
+  <title>Designing Graphical User Interface (GUI) in OpenGL</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/personalblog.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">      
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>          
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/Backgrounds/demystify_3d_cover.svg');" >
+    <div class="overlay tint" ></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Designing Graphical User Interface (GUI) in OpenGL</h1>
+            <h2 class="subheading">  </h2>
+            <span class="meta">Posted by
+              <a href="#">Simar</a>
+              on November 8, 2018</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">      
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto" style="text-align:justify;">
+          </br>
+          <h2>Introduction</h2>
+          <p>We can generate Computer graphics using many different ways.  For example, We can choose to use specifications like OpenGL, Direct3D, Vulkan etc or use any of the existing graphics rendering game-engines like Unity3D, FrostBite, CryEngine, Unreal Engine etc which provides necessary and sufficient functionality to render graphics. OpenGL is a flexible, robust and asset rich specification which has been used extensively in the industry for past so many years. It was initially released in February 1992</p>
+          <p><b>OpenGL</b> is often referred to as an Application Programming Interface (API) which has a plethora of functions that can be used to render computer graphics. However, in reality, OpenGL is not an API, rather a specification defined by the <b>Khronos Group</b> containing a list of all the functions and documentation of what each function does. It doesn’t contain any implementation of the functions whatsoever. Every graphics card manufacturer like NVIDIA, Qualcomm, Intel, Broadcom etc. implements these function independently which may vary substantially to other graphics card manufacturer’s implementation.</p>
+          <p>Perhaps, OpenGL can still be considered as a 3D graphics API. It has an Open Source License which allows it to be used by any individual or entity who intends to use OpenGL for rendering graphics for private or commercial purpose without having to pay any royalty fee to the Khronos group</p>
+          <p>So far, many different OpenGL specification versions have been released. Currently, the latest running version is <b>OpenGL 4.6</b>. Every graphics card developed so far supports up to a specific version of OpenGL that it can work with. Backward compatibility in each graphics card ensures flawless working and integration of the graphics card with all the previously released versions of the OpenGL specifications</p>
+          <p>Support for different Extensions is a salient feature of the OpenGL specification. Developers can query the graphics card to check which all extensions are supported. Hence, different functionalities can be turned ON/OFF in the code by developers.</p>
+          <div class="code">
+            if (GL_ABR_extension)</br>
+            {</br>
+                // implement functions provided by the extension</br>
+            }</br>
+            else</br>
+            {</br>
+                //Do not implement functions provided by the extension</br>
+            }</br>
+          </div>
+          </br>
+          <h2>Graphics Pipeline</h2>
+          <p>The sole objective of any graphics framework is to decide the color of each pixel on the screen. To accomplish that, the following sequence is followed:-</p>
+          <ol>
+              <li>
+                  <p><b>Transform 3D to 2D</b></p>
+                  <p>To transform 3D objects into 2D, first, we need to translate the 3D coordinates into 2D coordinates. 2D coordinates in the world space are then further mapped onto 2D pixels of the screen</p>
+              </li>
+              <li>
+                  <p><b>Rasterization Stage</b></p>
+                  <p>Rasterization stage comprises the creation of a Vertex Shader, a Fragment Shader and compiling them into a Shader program and thereafter implementing advanced OpenGL techniques like blending etc</p>                  
+              </li>
+              <li>
+                  <p><b>Integrating everything</b></p>
+                  <p>The final step is to combine together everything which results in the rendering of graphics on the screen</p>                  
+              </li>
+          </ol>          
+          <h2>OpenGL Components</h2>
+          <p>Basic Elements of OpenGL are:-</p>
+          <ol>
+              <li>Primitives</li>
+              <li>Shaders</li>
+              <li>Lighting</li>
+          </ol>
+          
+          <h4>Primitives</h4>
+          <p>Primitives, often called as prims, are the fundamental geometric objects that a computer graphic system can render on the screen. They are the ‘atomic’ graphics objects which constitute any complex figure or shape. Primitives can be either <i>Geometric primitives</i> or <i>Texture primitives</i>. Geometric primitives consist of Points, Lines, and Polygons whereas Texture primitives include Image Bitmaps and Texture mapping.</p>
+          
+          <h4>Shaders</h4>
+          <p>Shaders can be either a Vertex shader or a Fragment shader. The vertex shader is used to define any primitive shape using attributes like the position of points, lines or curves, scale, width etc. Vertex shaders can be explicitly defined or they can be initialized with data during runtime. A Fragment shader is used to decide the color of a pixel by describing the color scheme to be used, the exact color and also the alpha channel (transparency) and hence, a fragment shader runs for every pixel on the screen. Shaders can not transfer data between them. However, techniques like using <i>Uniforms</i> allow shaders to transfer data back and forth.</p>
+
+          <h4>Lighting</h4>
+          <p>Lighting is the process of describing the light source to be used. A light source could be Spot Light which is simply a point source of light, a Surface light or an Ambient light source. Lighting in a frame is characterized by the position of the light source regarding the subject, the color of the light source and the intensity of the light source casting light on the subject. The final pixel color is calculated taking into account all the parameters like object color described by the fragment shader, the light source position, the intensity of light source etc.</p>
+          <p>A sample for what we intend to achieve is shown below.</p>
+          
+          <figure>
+            <img src="./img/2018/11/SampleWork_bySimarMannSingh-e1545065471700.gif" class="blog-img" width="80%" alt="A Sample GUI integrating different tabs, Screen Overlays and control options">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 1: A Sample GUI integrating different tabs, Screen Overlays and control options </figcaption>          
+          </figure>    
+          
+          <p>The above shown gif is from one of my projects which is an open-source Radar Graphical User Interface(GUI). The code is available on github. Please visit the github profile and check out the Open-source Radar GUI project. Feel free to check out other projects as well. </p>
+
+        </div>
+      </div>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function(){
+          this.page.url = 'https://simarmannsingh.de/designguiopengl.html';
+          this.page.identifier = '';          
+        };
+        (function() {
+          var d = document;
+          var s = d.createElement('script');
+          s.src = 'https://simarmannsingh-de.disqus.com/embed.js'
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable Javascript to run a third party plugin Disqus which will enable you to view and post comments related to this blog post. Developer and maintainer of this blog is trying to implement an independent and open source comment box but has not finished yet, meanwhile using Disqus plugin. </noscript>
+    </div>
+    <div id="subscribe-btn-email" class="subscribe-btn">
+      <span>Subscribe</span>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>   
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://facebook.com/simarms" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/simarmannsingh" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">Copyright &copy; simarmannsingh.de  |   2020</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="bg-modal">
+    <div class="bg-content">
+      <form action="https://ml.kundenserver.de/cgi-bin/mailinglist.cgi" method="POST" >
+        <div id="subsribe-close-button" class="close">+</div>
+        <img src="./img/emailIcon.png" width="80px" alt="">
+        <br/>
+        <input checked name="subscribe_r" type="hidden" value="subscribe">      
+        <span>Get email notifications for new posts</span>
+        <br/>
+        <input maxlength="35" name="mailaccount_r" size="30" placeholder="Please enter your Email address" type="text">
+        <br/>      
+        <input maxlength="35" name="mailaccount2_r" size="30" placeholder="Enter your Email Address again" type="text">
+        <br/>
+        <input type="SUBMIT" class="btn" value="Subscribe">          
+        <input name="FBMLNAME" type="hidden" value="press@simarmannsingh.de">
+        <input name="FBLANG" type="hidden" value="de">
+        <input name="FBURLERROR_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/error.de.html">
+        <input name="FBURLSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/subscribe.de.html">
+        <input name="FBURLUNSUBSCRIBE_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/unsubscribe.de.html">
+        <input name="FBURLINVALID_L" type="hidden" value="https://ml.kundenserver.de/mailinglist/invalid.de.html">
+      </form>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+</html>

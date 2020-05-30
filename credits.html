@@ -5,18 +5,21 @@
 
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src * ; 
-  style-src 'self' fonts.googleapis.com 'unsafe-inline';
+  style-src 'self' fonts.googleapis.com 'unsafe-inline' https://c.disquscdn.com/;
+  img-src   'self' c.disquscdn.com referrer.disqus.com ; 
   script-src 'self' 
-    'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=' 
+    'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='    
+    'sha256-SrvyepyxELjannhqUk37dbhItiOTizEq1htXlcM5vmU='
+    'sha256-R1fFt+HLmte+Rxdey15ffW1pycfwaiQxbU6VQDsVpmA='
     ajax.cloudflare.com
-    *.disqus.com;        
-  img-src 'self' c.disquscdn.com referrer.disqus.com ">
+    *.disqus.com
+    https://simarmannsingh-de.disqus.com/embed.js; ">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to my personal blog where I like to post stuff that piques my interest. You can add your email address to the mailing link below to get updates on your">
+  <meta name="description" content="Credits for various components used in the development of this website goes to..">
   <meta name="author" content="SIMAR MANN SINGH">
 
-  <title>About Me</title>
+  <title>Credits</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -57,43 +60,83 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/Backgrounds/more_about_me.svg')">
-    <div class="overlay"></div>
+  <header class="masthead" style="background-image: url('img/Backgrounds/demystify_3d_cover.svg');" >
+    <div class="overlay tint" ></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h2>About Me</h2>
-            <span class="subheading">This is what I do.</span>
+          <div class="post-heading">
+            <h1>Credits</h1>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto"  style="text-align:justify;">
-        <p>Are you the kind of person who likes to stay up to date on topics varying from online security, cryptography, software settings, 3D printing or perhaps even the most remotely related topic to Technology? Well, then you have landed on the right blog. </p>
-        <p>Welcome to my personal blog where I like to post stuff that piques my interest. You can add your email address to the mailing link below to get updates on your email whenever I post a new blog post.</p>
-        <p>For everyone of us, there is some thing or the other that matters to him a lot. In my case, its this essence of Electronics, which bolsters me to pursue amazing Hobby Projects. Though I may not be an ingenious creature, but I can still manage to complete the projects that I take up.</p>        
-        <p>Thats a lot of useless stuff on this "about-me" page. Let me formally introduce myself. I am Simar, currently living in some undisclosed location (and you expected me to write the city after dropping buzz words like <i>data-security</i> ? c'mmon),learning new stuff every day and sometimes sharing that knowledge with everyone through this blog. I believe in open-source community and I can't withstand any politics at all. Machines......are a distraction...indeed (-Pepper Potts). But they have the potential to solve a lot of problems humanity face today. Its because of this reason, Github stores software codes in its Arctic Vault in SVALBARD, in a hope that if manjor chunk of humanity is wiped out for any reason, the remaining can bring back everything we have today using those freely available open source programs (which also have instructions on how to use them as they are in tapes intended to last 50k+ years) </p>
-        <p>But yeaah, thats pretty much what I believe in, and it is what makes me, who I am today.</p>
-        <hr>
-        
-        <a style="font-size: 15px; font-family: monospace; margin-top: 30px;" >NOTE: I have recently moved all my website content from the FREE Blogging platform Wordpress to my OWN SERVER after purchasing this domain. If you also maintain a blog or if you too are thinking about starting a blog, then I strongly recommend getting a cheap domain (you can get it from whichever company you like) and move all your data there (if you care about Data Security) </a>
+  <!-- Post Content -->
+  <article>
+    <div class="container">      
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto" style="text-align:justify;">
+          </br>
+          
+          <p>The development of this website would not have been possible without the support of open-source community. Thanks to the community's so many seasoned dev members who created open-source projects/ packages and allowed people to use them freely.</p>
+          <p>The credits below are merely my way of showing gratitude to the people/companies/entities who somehow helped in the development of my website. <b>None of the this is sponsored by any company whatsoever.</b></p>
+          <p>Some of the open-source frameworks/packages/tools used in development of this website include :-</p>
+          <ul>
+              <li>
+                  <p><b>Bootstrap</b></p>
+                  <p>This website uses Bootstrap framework. Thanks to the authors of Bootstrap project- Mark Otto and Jacob Thornton who released the project initially with MIT license in 2011. Had there been no bootstrap, it would have been more difficult I guess. </p>
+              </li>
+              <li>
+                  <p><b>Github Pages</b></p>
+                  <p>Every website uses some sort of hosting. Some poeple purchase hosting from companies like <a href="http://www.hostgator.com/">Hostgator</a>, <a href="https://www.siteground.com/">Siteground</a>, <a href="https://www.hostinger.com/web-hosting">Hostinger</a> etc depending on their needs. Similarly, since this website is a static website. it uses Github pages as hosting with a free plan.</p>
+                  <p>Thanks a lot to Github for offering the service free of cost.</p>
+              </li>
+              <li>
+                  <p><b>Jekyll</b></p>
+                  <p>Github pages uses Jekyll behind the scenes. Jekyll, written in Ruby, is a static-site generator created by Tom Preston Werner, Github's co-founder. Tom initially released Jekyll with an MIT open-source license in 2008. Soon enough, Jekyll was taken over by Parker Moore who released Jekyll 1.0 and has been maintainer since then.</p>
+              </li>
+              <li>
+                  <p><b>Ionos by 1&1</b></p>
+                  <p>1&1 Ionos is a german Domain Name registrar which also offer other services like web-hosting, SSL certification, email-services, website-builders etc. Thanks to Ionos for offering cheap domain registration plans. It is Ionos where this domain is currently registered. They offer domains at throw-away prices including email-address, SSL-certificates etc.</p>
+              </li>
+              <li>
+                  <p><b>Cloudflare</b></p>
+                  <p>Every website needs some sort of <i>Content-Delivery-Network(CDN)</i> to serve the request of every user across globe as fast as possible. This website uses Cloudflare for its CDN and the SSL certificate is also issued by CloudFlare as it also serve as Certification Authority(CA). Once again, thanks to CloudFalre for providing free plans for small static websites.</p>                  
+              </li>
+          </ul>
+          <p>I express my gratitude towards all those who somehow helped in making the above mentioned open-source projects possible. The list mentioned above is surely NOT exhaustive. There are so many others as well. I am thankful to all those. Someday I also intend to give something back to the dev community (if I can manage to make something good in the first place).</p>
+          <p><i>As I always say, the world needs more open-source developers more than anything else.</i></p>
+          
+
+        </div>
       </div>
+      <div id="disqus_thread"></div>
+      <script>
+        var disqus_config = function(){
+          this.page.url = 'https://simarmannsingh.de/credits.html';
+          this.page.identifier = '';          
+        };
+        (function() {
+          var d = document;
+          var s = d.createElement('script');
+          s.src = 'https://simarmannsingh-de.disqus.com/embed.js'
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable Javascript to run a third party plugin Disqus which will enable you to view and post comments related to this blog post. Developer and maintainer of this blog is trying to implement an independent and open source comment box but has not finished yet, meanwhile using Disqus plugin. </noscript>
     </div>
     <div id="subscribe-btn-email" class="subscribe-btn">
       <span>Subscribe</span>
     </div>
-  </div>
+  </article>
 
   <hr>
 
   <!-- Footer -->
-  <footer>
+  <footer>   
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -163,5 +206,4 @@
   <script src="js/clean-blog.min.js"></script>
 
 </body>
-
 </html>

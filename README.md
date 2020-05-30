@@ -21,6 +21,12 @@ called **_cfduid**. The cookie does not collect any kind of data, but it serves 
 How does the cookie do that? The cookie randomly generates a unique number long (long enough to be unique) and stores that number as a cookie. So whenever the user makes a request again, the same cookies is sent to the server authenticating that the user is indeed a genuine user. This also serves in distinguishing the number of views (or hits) a website gets as the subsequent requests containing a cookie are not considered multiple views. So, no matter how many times a user views the contents, it is still counted as one view, until the cookie is destroyed and a new cookie is fetched from the server.
 Further details about the functioning of this specific cookie can be found [here](https://support.cloudflare.com/hc/en-us/articles/200170156-Understanding-the-Cloudflare-Cookies#12345682)
 
+### Note to Security Researchers 
+Securtiy researchers can now report vulnerabilites in the website using secure channel. The standard Security.txt file can be accessed at [this location](https://simarmannsingh.de/.well-known/security.txt). The file security.txt contains details on how to contact the developer and report vulnerabilites using excrypted email. The file also contains sha256 checksum for pgp_public.asc file. So you can check the sha256 checksum and verify if the file you got is the actual file you think it is. In case someone made any changes to the file, the checksum would not be same.
+
+Use the following command in terminal (for linux baes OS) to get the sha256 checksum.
+    sha256sum <filename>
+
 ## Copyright and License
 
 Copyright 2020 Simar Mann Singh Chawala. Code released under the [MIT](https://github.com/simarmannsingh/personalblog/blob/gh-pages/LICENSE) license.
