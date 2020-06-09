@@ -268,6 +268,15 @@
     color:#076ace;
     width: 100%;
   }
+  .unsubscribe {
+    text-align: center;
+  }
+  .unsubscribe input {    
+    margin: 8px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+  }
+
 
   /*==============================================*/
   /*---------------- Media Queries ---------------*/
