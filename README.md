@@ -14,7 +14,7 @@ Readers are encourage to also start writing blogs themselves and try to write it
 
 
 ## Security and Data Collection
-I am pleased to announce that the website collects no user data whatsoever, absolutely NONE. As a matter of fact, I hate the websites which keep tracking the user's activity by placing cookies. You can check for yourself that this website does not use any cookie at all.
+I am pleased to announce that the website collects no user data whatsoever, absolutely NONE. As a matter of fact, I hate the websites which keep tracking the user's activity by placing cookies. You can check for yourself that this website does not use any cookie at all for data collection.
 
 However, For the secure functioning of the website itself, the CloudFlare Servers uses one cookie 
 called **_cfduid**. The cookie does not collect any kind of data, but it serves the purpose of authenticating a user. So, the servers can know if it is a bonafied user or a malicious program/hacker trying to break in.
@@ -26,6 +26,8 @@ Securtiy researchers can now report vulnerabilites in the website using secure c
 
 Use the following command in terminal (for linux baes OS) to get the sha256 checksum.
     sha256sum <filename>
+
+If you would like to report vulnerabilities without going through hassle of downloading public key, encrypting the email yourself, you can simply use my [Hawkpost](https://hawkpost.co/box/fcfb631e-d2b4-4805-a9d4-5ceb9a2ce8b4) link to contact me via a secure channel with less hassle.
 
 ## Copyright and License
 
