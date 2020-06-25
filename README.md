@@ -24,8 +24,9 @@ Further details about the functioning of this specific cookie can be found [here
 ### Note to Security Researchers 
 Securtiy researchers can now report vulnerabilites in the website using secure channel. The standard Security.txt file can be accessed at [this location](https://simarmannsingh.de/.well-known/security.txt). The file security.txt contains details on how to contact the developer and report vulnerabilites using excrypted email. The file also contains sha256 checksum for pgp_public.asc file. So you can check the sha256 checksum and verify if the file you got is the actual file you think it is. In case someone made any changes to the file, the checksum would not be same.
 
-Use the following command in terminal (for linux baes OS) to get the sha256 checksum.
-    sha256sum <filename>
+Use the following command in terminal (for linux based OS) to get the sha256 checksum.
+
+    sha256sum filename
 
 If you would like to report vulnerabilities without going through hassle of downloading public key, encrypting the email yourself, you can simply use my [Hawkpost](https://hawkpost.co/box/fcfb631e-d2b4-4805-a9d4-5ceb9a2ce8b4) link to contact me via a secure channel with less hassle.
 
