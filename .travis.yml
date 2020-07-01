@@ -1,14 +1,19 @@
-language:      node_js
-git:
-  depth:       3
+language: node_js
 node_js:
-  - "node"
-install:       npm install
+  - "stable"
+cache: npm
+
+install:
+  - npm ci
+
 script:
   - npm test
-  - gulp
-cache:
-  directories:
-    - node_modules
-notifications:
-  email:       false
+  - npm run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local_dir: build
+  on:
+    branch: master
