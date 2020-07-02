@@ -61,7 +61,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/Backgrounds/privacy.svg');" >
+  <header class="masthead" style="background-image: url('img/Backgrounds/emailvalidation.svg');" >
     <div class="overlay tint" ></div>
     <div class="container">
       <div class="row">
@@ -95,12 +95,13 @@
           <p>Before I explain what SPF is, first let me clear it out what SPF is not. SPF here is not used for Sun Protection Factor that you often find on sunscreens and lotions etc. This SPF is different.This SPF is a kind of record that you keep in your DNS that is used to indicate to mail exchanges which hosts are authorized to send mail on behalf of a domain. It is basically a TXT record that is created in DNS which prevents any unauthorized person from using a domain to send emails. For example, if Alice has created an SPF record in her DNS which lists all the authorized hosts, then Bob would get a confirmation when he receives an authentic email from Alice but would get a warning sign/question mark if Bob receives an email from an unauthorized host. So, in the example in the last section, if I send an email to Bob and send my identity as Alice, Bob’s mail-server would know that the received email is NOT actually from Alice since the host used to send the email is not one of the hosts Alice has declared as authorized hosts.</p>
           
           <h3>SPF Record Format</h3>
-          <p>This section is only for those who already have a web-domain or are responsible for the management of your company’s web-domain. Normal population can skip this section and go to next section.</p>
+          <p>This section is only for those who already have a web-domain or are responsible for the management of their company’s web-domain. If you don't have to configure any SPF record yourself, you can skip this section and go to next section.</p>
           <p>An SPF record is typically defined using a TXT record type. It has the following format</p>
           <p class="code">
             v = spf1 a mx ip4:X.X.X.X include:_spf.google.com ~all
           </p>
-          <p>Once configured, you can check as well if you configured it correctly by following <a href="https://www.dmarcanalyzer.com/spf/checker/">this link</a> and scanning your DNS entries for correct SPF entry.</p>
+          <p>Here, <i>v=spf1</i> is used to indicate that this is an SPF record, <i>'include:'</i> followed by the address of your email exchange server address is used to indicate your authorized host (you can add multiple hosts), and <i>'~all'</i> indicate what should be done if an email sent from unauthorized host is received by someone. In case it is '~all', it refers to Softfail which means the email should simply be put in spam folder. In case it is '-all', it refers to Hardfail which means the received email should direclty be deleted (Not received at all all or bounced back). What is important to note is that '~all' or '-all' is always written in the end of the record. </p>
+          <p>Once configured, you can check as well if you configured it correctly by following <a href="https://www.dmarcanalyzer.com/spf/checker/">this link</a> and scanning your DNS entries for a correct SPF entry.</p>
           <p>If however, you still have SPF miss-configured, the above link will show No correct SPF found in results. So, you would get an idea if your SPF is correct or not.</p>
 
           <h3>Why is it important for you to know?</h3>          
@@ -110,28 +111,20 @@
           <h3>What exactly you need to check then?</h3>
           <p>You understood well enough what is email validation and why it is so important for you to verify the sender of an email before opening/replying to any invalidated email. Now lets see how can you check which email is a valid email and which email is not. To be frank, it is not very hard to spot an invalid one. Many people use Gmail/Hotmail as their email service provider. Gmail does a good job at displaying such invalidated emails using a question mark right before the “mail-from” header in an email, as shown below</p>
 
-          <img src="./img/2020/06/simarmann.png" alt="">
+          <figure>
+            <img src="./img/2020/06/simarmann.png" class="blog-img" width="40%" alt="invalidated email with a question mark">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 1: Invalidated email with a question mark</figcaption>          
+          </figure>           
 
           <p>Hovering you mouse over this question mark will show some more information saying “Gmail couldn’t verify that [sender] actually sent this email”. Hotmail does a very similar job on identifying an invalidated email. If the email, however, is validated and gmail can confirm this validation then you would probably see email header somewhat as shown below. You would not see a question mark, rather an illustration representing a person.</p>
 
-          <img src="./img/2020/06/simarman.png" alt="Simar Mann Singh domain">
+          <figure>
+            <img src="./img/2020/06/simarman.png" class="blog-img" width="40%" alt="Proper validated email representing a person">
+            <figcaption style="font-size: 15px; text-align: center;">Figure 2: Proper validated email representing a person</figcaption>          
+          </figure>
 
-          <p>There are a lot of companies which have their email-servers miss-configured. A small list of companies which I encountered recently is shown below.</p>
-          <ul>
-              <li>Nokia</li>
-              <img src="./img/2020/06/nokia.png" alt="Nokia">
-              <li>Ganss peronal GmbH</li>
-              <img src="./img/2020/06/gansspersonal.png" alt="Ganss peronal GmbH">
-              <li>Automotive Safety Technologies GmbH</li>
-              <img src="./img/2020/06/astech.png" alt="Automotive Safety Technologies GmbH">
-              <li>ALTE LEIPZIGER Lebensversicherung A.G.</li>
-              <img src="./img/2020/06/alteleipziger.png" alt="ALTE LEIPZIGER Lebensversicherung A.G.">
-              <li>DCON Software & Service AG</li>
-              <img src="./img/2020/06/dcon.png" alt="DCON Software & Service AG">
-          </ul>
-
-          <p>If you know someone who works in a company listed below, do share this post with them and tell them to please configure their email-server as soon as they can. A company's reputation is all it has and it certainly is not easy to earn. Reputation can be compromised to some extent due to such petty miss-configurations. </p>
-          <p>Emails form a fundamental part of our digital communications in today’s world. A major percentage of online scams occur by using such invalidated emails coupled with lack of awareness among population about general online safety and security fundamentals. Stay safe and share your knowledge.</p>
+          <p>There are a lot of companies which have their email-servers miss-configured. A company's reputation is all it has and it certainly is not easy to earn. Reputation can be compromised to some extent due to such petty miss-configurations.</p>
+          <p>Emails form a fundamental part of our digital communications in today’s world. A major percentage of online scams occur by using such invalidated emails coupled with lack of awareness among people about general online safety and security fundamentals. So, do share this post with your friends and family and let them be aware as well.</p>
           <hr>
         </div>
       </div>
