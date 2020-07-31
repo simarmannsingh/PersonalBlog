@@ -1,6 +1,6 @@
 Contact: mailto:contact@simarmannsingh.de
-Encryption: https://simarmannsingh/.well-known/pgp_public.txt
-Encryption: https://simarmannsingh/.well-known/pgp_public.asc
+Encryption: https://simarmannsingh.de/.well-known/pgp_public.txt
+Encryption: https://simarmannsingh.de/.well-known/pgp_public.asc
 Preferred-Languages: en
 Canonical: https://simarmannsingh.de/.well-known/security.txt
 SHA256 for pgp_public.asc file: 4a3814313b1e1c6909ee2f2bf4e31272f86870f67483510e53da0e6c4b9e9ab0
