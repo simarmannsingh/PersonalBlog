@@ -3,6 +3,11 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
+
+ html{
+   scroll-behavior: smooth;
+ }
+
 body {
   font-size: 20px;
   color: #212529;
@@ -131,6 +136,7 @@ img::-moz-selection {
     transition: background-color 0.2s;
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   #mainNav.is-fixed {
     position: fixed;
@@ -314,8 +320,8 @@ header.masthead .post-heading .meta a {
   display: block;
   margin: 0;
   transition: top 0.3s ease, opacity 0.3s ease;
-  vertical-align: middle;
-  vertical-align: baseline;
+  /* vertical-align: middle;
+  vertical-align: baseline; */
   opacity: 0;
 }
 .floating-label-form-group .help-block {

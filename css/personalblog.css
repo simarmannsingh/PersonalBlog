@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 20px;
   color: #212529;
@@ -137,8 +141,9 @@ img::-moz-selection {
   #mainNav {
     transition: background-color 0.2s;
     /* Force Hardware Acceleration in WebKit */
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);    
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   #mainNav.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
@@ -350,8 +355,8 @@ header.masthead .post-heading .meta a {
   display: block;
   margin: 0;
   transition: top 0.3s ease, opacity 0.3s ease;
-  vertical-align: middle;
-  vertical-align: baseline;
+  /* vertical-align: middle;
+  vertical-align: baseline; */
   opacity: 0;
 }
 
