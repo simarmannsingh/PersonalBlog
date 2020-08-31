@@ -6,10 +6,17 @@
       http-equiv="Content-Security-Policy"
       content="default-src * ; 
       style-src 'self' fonts.googleapis.com 'unsafe-inline';
-      style-src-elem 'self' fonts.googleapis.com 'unsafe-inline' *.disquscdn.com *.fontawesome.com;
-      img-src   'self' c.disquscdn.com referrer.disqus.com ; 
+      style-src-elem 'self' fonts.googleapis.com 'unsafe-inline' *.disquscdn.com *.fontawesome.com
+      maxcdn.bootstrapcdn.com;
+      img-src   'self' c.disquscdn.com referrer.disqus.com cdn.designer-images.com moosendimages.imgix.net; 
+      script-src-elem 'self' cdn.stat-track.com polyfill.io
+      'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='
+      'sha256-uahgRIgwkClaWUHfGNUBwaHYLhO6HSGOlWuSQFV9LfY='
+      'sha256-iQC7Ao5V6wGczW7Dq90zQzcn9iSB6jDHcIFFsVCoKz4='
+      'sha256-8js+UH8UY075W7nttR1JSpTkI02jUmqsa7/0y423/ac=';
       script-src 'self' 
         'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE='
+        'sha256-GVcjnlahbAZ5L+K++bDmsAx1jiE41xTKOtetQzb6I5U='
         ajax.cloudflare.com
         *.disqus.com; "
     />
@@ -119,94 +126,10 @@
           <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
           <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
           <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
-          <form
-            name="sentMessage"
-            id="contactForm"
-            action="https://ml.kundenserver.de/cgi-bin/mailinglist.cgi"
-            method="POST"
-          >
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Name"
-                  id="name"
-                  required
-                  data-validation-required-message="Please enter your name."
-                />
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Email Address</label>
-                <input
-                  class="form-control"
-                  placeholder="Email Address"
-                  id="email"
-                  maxlength="51"
-                  name="mailaccount_r"
-                  size="51"
-                  type="text"
-                  data-validation-required-message="Please enter your email address."
-                  required
-                />
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="control-group">
-              <div class="form-group floating-label-form-group controls">
-                <label>Message</label>
-                <textarea
-                  rows="5"
-                  class="form-control"
-                  placeholder="Message"
-                  id="message"
-                  required
-                  data-validation-required-message="Please enter a message."
-                ></textarea>
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <br />
-            <div id="success"></div>
-            <div class="form-group">
-              <input
-                type="SUBMIT"
-                value="Send"
-                class="btn btn-primary"
-                id="sendMessageButton"
-              />
-            </div>
-            <input
-              name="FBMLNAME"
-              type="hidden"
-              value="contact@simarmannsingh.de"
-            />
-            <input name="FBLANG" type="hidden" value="de" />
-            <input
-              name="FBURLERROR_L"
-              type="hidden"
-              value="https://ml.kundenserver.de/mailinglist/error.de.html"
-            />
-            <input
-              name="FBURLSUBSCRIBE_L"
-              type="hidden"
-              value="https://ml.kundenserver.de/mailinglist/subscribe.de.html"
-            />
-            <input
-              name="FBURLUNSUBSCRIBE_L"
-              type="hidden"
-              value="https://ml.kundenserver.de/mailinglist/unsubscribe.de.html"
-            />
-            <input
-              name="FBURLINVALID_L"
-              type="hidden"
-              value="https://ml.kundenserver.de/mailinglist/invalid.de.html"
-            />
-          </form>
+         
+          <div data-mooform-id="3cbd4e30-2e7e-44d0-bf94-78398060049b" ></div>
+            
+            
         </div>
       </div>
       <div id="subscribe-btn-email" class="subscribe-btn">
@@ -315,6 +238,9 @@
 
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
+
+   <!-- MooSend Script to collect the Subscriber's email list -->
+   <script>if(!window.mootrack){ !function(t,n,e,o,a){function d(t){var n=~~(Date.now()/3e5),o=document.createElement(e);o.async=!0,o.src=t+"?ts="+n;var a=document.getElementsByTagName(e)[0];a.parentNode.insertBefore(o,a)}t.MooTrackerObject=a,t[a]=t[a]||function(){return t[a].q?void t[a].q.push(arguments):void(t[a].q=[arguments])},window.attachEvent?window.attachEvent("onload",d.bind(this,o)):window.addEventListener("load",d.bind(this,o),!1)}(window,document,"script","https://cdn.stat-track.com/statics/moosend-tracking.min.js","mootrack"); } mootrack('loadForm', '3cbd4e302e7e44d0bf9478398060049b');</script>
 
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
