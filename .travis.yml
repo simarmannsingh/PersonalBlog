@@ -9,10 +9,11 @@ install:
 script:
   - npm test
 
+
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  local_dir: build
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN 
+  keep_history: true
   on:
     branch: master
