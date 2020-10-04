@@ -40,7 +40,7 @@
 
 })(jQuery); // End of use strict
 
-
+// Functionailty for subscribe button
 document.getElementById('subscribe-btn-email').addEventListener('click', function(){
   document.querySelector('.bg-modal').style.display='flex'
 });
