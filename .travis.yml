@@ -15,5 +15,7 @@ deploy:
   skip_cleanup: true
   github_token: $GITHUB_TOKEN 
   keep_history: true
+  email: simarmannsingh@gmail.com
+  name: simarmannsingh
   on:
     branch: master
