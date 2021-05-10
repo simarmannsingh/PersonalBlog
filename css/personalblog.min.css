@@ -466,9 +466,9 @@ input {
 
 .close {
   position: absolute;
-  top: 0;
-  right: 14px;
-  font-size: 36px;
+  top: 10px;
+  right: 14px;  
+  font-size: 46px;
   transform: rotate(45deg);
   cursor: pointer;
 }
@@ -530,12 +530,14 @@ input {
   width: 100%;
 }
 .unsubscribe {
-  text-align: center;
-}
-.unsubscribe input {
-  margin: 8px auto;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 21px;
+  display: flex;
+  /* position: fixed; */
+  /* position: absolute; */
+  /* left: 0; */
+  margin: 0 auto;
+  width: 80vw;
+  height: 30em;
+  z-index: 10;
 }
 
 /*==============================================*/

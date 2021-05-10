@@ -487,9 +487,9 @@ input {
 
 .close {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 14px;
-  font-size: 36px;
+  font-size: 46px;
   transform: rotate(45deg);
   cursor: pointer;
 }

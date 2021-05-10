@@ -1,3 +1,12 @@
+// Functionailty for subscribe button
+document.getElementById('subscribe-btn-email').addEventListener('click', function(){
+  document.querySelector('.bg-modal').style.display='flex'
+});
+
+document.querySelector('.close').addEventListener('click', function(){
+  document.querySelector('.bg-modal').style.display='none'
+});
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -40,11 +49,4 @@
 
 })(jQuery); // End of use strict
 
-// Functionailty for subscribe button
-document.getElementById('subscribe-btn-email').addEventListener('click', function(){
-  document.querySelector('.bg-modal').style.display='flex'
-});
 
-document.querySelector('.close').addEventListener('click', function(){
-  document.querySelector('.bg-modal').style.display='none'
-});
