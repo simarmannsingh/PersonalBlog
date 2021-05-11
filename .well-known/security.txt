@@ -1,6 +1,15 @@
-Contact: mailto:contact@simarmannsingh.de
-Encryption: https://simarmannsingh.de/.well-known/pgp_public.txt
-Encryption: https://simarmannsingh.de/.well-known/pgp_public.asc
+Contact: mailto:contact@simarmannsingh.com
 Preferred-Languages: en
-Canonical: https://simarmannsingh.de/.well-known/security.txt
-SHA256 for pgp_public.asc file: 4a3814313b1e1c6909ee2f2bf4e31272f86870f67483510e53da0e6c4b9e9ab0
+Canonical: https://simarmannsingh.com/.well-known/security.txt
+
+NOTE:
+Unfortunately, after the migration of my blog from https://simarmannsingh.de to https://simarmannsingh.com (.de domain to .com domain), I cannot use the encryption anymore as I've setup a DNS level email-forwarding system and the email address I use to actually receive the emails is, lets say, a different type of email address.
+
+Hence for secure transmission of your message, I can only offer the Hawkpost service at the moment.
+Link : https://hawkpost.co/box/fcfb631e-d2b4-4805-a9d4-5ceb9a2ce8b4
+
+If you would like me to contact you using encrypted emails, you can provide me your public key here.
+Link : https://hawkpost.co/box/d8da3932-e61b-4510-a5f5-4ea6520b57c1
+
+If you would like to send me an encrypted email, without reporting any security vulnerability, visit here.
+Link : https://hawkpost.co/box/3cf0981c-658a-4200-8d17-f3c24ae3bf74
