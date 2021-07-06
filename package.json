@@ -31,20 +31,23 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.10.2",
     "bootstrap": "4.3.1",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "socket.io-parser": "^4.0.4"
   },
   "devDependencies": {
     "browser-sync": "^2.26.10",
     "del": "5.1.0",
+    "glob-parent": "^6.0.0",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "7.0.0",
     "gulp-clean-css": "4.2.0",
     "gulp-header": "2.0.9",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "1.4.0",
-    "gulp-sass": "4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-uglify": "3.0.2",
-    "merge-stream": "2.0.0"
+    "merge-stream": "2.0.0",
+    "trim-newlines": "^4.0.2"
   },
   "main": "gulpfile.js"
 }
